@@ -1,4 +1,4 @@
-﻿using Alten.Career.Models;
+using Alten.Career.Models;
 using Alten.Career.Tests;
 using Alten.Jama;
 using Alten.Jama.Models;
@@ -23,16 +23,21 @@ namespace Alten.Career.ViewModels
             EntryLevels = EntryLevels.ExperiencedProfessionals,
             Tasks = new List<string>
             {
-                "As a Software Developer (m/f/d) C# you are responsible for programming software using C# and .NET in the semiconductor industry",
+                @"As a Software Developer (m/f/d) C# you are responsible for programming software using C# and .NET in 
+the semiconductor industry",
                 "In the course of this you stabilize the TCE architecture and you provide the connection to JAMA",
                 "You are responsible for providing advanced functions collecting within user surveys"
             },
             Profile = new List<string>
             {
-                "You have a completed technical education (University/University of Applied Sciences) in software development, computer science or equivalent",
-                "Relevant professional experience with C#, preferably with v7+, as well as solid knowledge in DI and IoC and NuGet package management are required for this position",
-                "You also have Git experience (at least all basic operations) and understand the importance of feature branches",
-                "Moreover, you have a solid WPF knowledge (control- & data templates, styles, trigger, bindings) as well as experience with MVVM pattern",
+                @"You have a completed technical education (University/University of Applied Sciences) in software 
+development, computer science or equivalent",
+                @"Relevant professional experience with C#, preferably with v7+, as well as solid knowledge in DI and 
+IoC and NuGet package management are required for this position",
+                @"You also have Git experience (at least all basic operations) and understand the importance of feature 
+branches",
+                @"Moreover, you have a solid WPF knowledge (control- & data templates, styles, trigger, bindings) as 
+well as experience with MVVM pattern",
                 "Fluent English and basic German skills complete your profile"
             },
             MonthlySalaryInEuros = 3_400,
