@@ -14,9 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Alten.Career\Alten.Career.csproj" />
-    <ProjectReference Include="..\Alten.Jama.RestSharp\Alten.Jama.RestSharp.csproj" />
-    <ProjectReference Include="..\Alten.Jama\Alten.Jama.csproj" />
+    <ProjectReference Include="..\..\src\Alten.Career\Alten.Career.csproj" />
+    <ProjectReference Include="..\..\src\Alten.Jama.RestSharp\Alten.Jama.RestSharp.csproj" />
+    <ProjectReference Include="..\..\src\Alten.Jama\Alten.Jama.csproj" />
   </ItemGroup>
 
 </Project>

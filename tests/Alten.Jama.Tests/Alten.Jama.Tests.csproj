@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -16,7 +16,7 @@
     <PackageReference Include="RestSharp" Version="106.10.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Alten.Jama.RestSharp\Alten.Jama.RestSharp.csproj" />
-    <ProjectReference Include="..\Alten.Jama\Alten.Jama.csproj" />
+    <ProjectReference Include="..\..\src\Alten.Jama.RestSharp\Alten.Jama.RestSharp.csproj" />
+    <ProjectReference Include="..\..\src\Alten.Jama\Alten.Jama.csproj" />
   </ItemGroup>
 </Project>
