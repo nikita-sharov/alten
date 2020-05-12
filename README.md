@@ -1,5 +1,7 @@
 # ALTEN
 
+![Job](media/job.png)
+
 ```csharp
 public static readonly JobViewModel YourJob = new JobViewModel
 {
@@ -17,14 +19,10 @@ public static readonly JobViewModel YourJob = new JobViewModel
     },
     Profile = new List<string>
     {
-        @"You have a completed technical education (University/University of Applied Sciences) in software 
-development, computer science or equivalent",
-        @"Relevant professional experience with C#, preferably with v7+, as well as solid knowledge in DI and 
-IoC and NuGet package management are required for this position",
-        @"You also have Git experience (at least all basic operations) and understand the importance of feature 
-branches",
-        @"Moreover, you have a solid WPF knowledge (control- & data templates, styles, trigger, bindings) as 
-well as experience with MVVM pattern",
+        "You have a completed technical education (University/University of Applied Sciences) in software development, computer science or equivalent",
+        "Relevant professional experience with C#, preferably with v7+, as well as solid knowledge in DI and IoC and NuGet package management are required for this position",
+        "You also have Git experience (at least all basic operations) and understand the importance of feature branches",
+        "Moreover, you have a solid WPF knowledge (control- & data templates, styles, trigger, bindings) as well as experience with MVVM pattern",
         "Fluent English and basic German skills complete your profile"
     },
     MonthlySalaryInEuros = 3_400,
@@ -34,7 +32,7 @@ well as experience with MVVM pattern",
         LastName = "Stankovic",
         JobTitle = "Recruiting Manager",
         Phone = "+43 664 39 85 200",
-        Email = "+43 664 39 85 200"
+        Email = "career@alten.at"
     }
 };
 ```
