@@ -37,4 +37,33 @@ public static readonly JobViewModel YourJob = new JobViewModel
 };
 ```
 
+![Job](media/job-application.png)
 
+```csharp
+public static JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
+{
+    Salutation = Salutation.Mr,
+    FirstName = "Nikita",
+    LastName = "Sharov",
+    Citizenship = "Russian Federation",
+    Address = "Mariatroster Straße 172/4",
+    PostalCode = "8044",
+    Location = "Graz",
+    DateOfBirth = DateTime.Parse("14.09.1982"),
+    Email = "nikita.sharov@235u.net",
+    PrimaryPhone = "+43 664 182 22 83",
+    StartingDate = DateTime.Parse("01.06.2020"),
+    YearlySalaryInEuros = JobViewModelTests.YourJob.MonthlySalaryInEuros * 14,
+    RegisteredAsUnemployed = false,
+    Attachments = new List<JobApplicationAttachment>
+    {
+        new JobApplicationAttachment
+        {
+            Content = Encoding.UTF8.GetBytes("..."),
+            ContentType = MediaTypeNames.Text.Plain,
+            FileName = "README.md"
+        }
+    },
+    PrivacyNoteAccepted = true
+};
+```
