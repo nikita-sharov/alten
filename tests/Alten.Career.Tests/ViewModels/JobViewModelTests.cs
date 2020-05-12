@@ -47,7 +47,7 @@ well as experience with MVVM pattern",
                 LastName = "Stankovic",
                 JobTitle = "Recruiting Manager",
                 Phone = "+43 664 39 85 200",
-                Email = "+43 664 39 85 200"
+                Email = "career@alten.at"
             }
         };
 

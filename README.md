@@ -11,8 +11,7 @@ public static readonly JobViewModel YourJob = new JobViewModel
     EntryLevels = EntryLevels.ExperiencedProfessionals,
     Tasks = new List<string>
     {
-        @"As a Software Developer (m/f/d) C# you are responsible for programming software using C# and .NET in 
-the semiconductor industry",
+        "As a Software Developer (m/f/d) C# you are responsible for programming software using C# and .NET in the semiconductor industry",
         "In the course of this you stabilize the TCE architecture and you provide the connection to JAMA",
         "You are responsible for providing advanced functions collecting within user surveys"
     },
