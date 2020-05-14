@@ -19,7 +19,7 @@ This repository showcases a sample based around creation of job offerings and jo
 ```csharp
 public static readonly JobViewModel YourJob = new JobViewModel
 {
-    ReferenceNumber = 3461,
+    Id = 3461,
     Title = "Software Developer (m/f/d) C#",
     Location = "Graz",
     ApplicationAreas = ApplicationAreas.SoftwareDevelopment,
@@ -50,7 +50,7 @@ public static readonly JobViewModel YourJob = new JobViewModel
     }
 };
 
-public static JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
+public static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
 {
     Salutation = Salutation.Mr,
     FirstName = "Nikita",
@@ -63,7 +63,7 @@ public static JobApplicationViewModel MyJobApplication = new JobApplicationViewM
     Email = "nikita.sharov@235u.net",
     PrimaryPhone = "+43 664 182 22 83",
     StartingDate = DateTime.Parse("01.06.2020"),
-    YearlySalaryInEuros = JobViewModelTests.YourJob.MonthlySalaryInEuros * 14,
+    YearlySalaryInEuros = YourJob.MonthlySalaryInEuros * 14,
     RegisteredAsUnemployed = false,
     Attachments = new List<JobApplicationAttachment>
     {
