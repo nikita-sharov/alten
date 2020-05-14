@@ -52,12 +52,19 @@ namespace Alten.Career.ViewModels
 
         private string MonthlySalaryText => string.Format(SalaryFormatInfo, "{0:#,###},-- €", MonthlySalaryInEuros);
 
-        public static JobViewModel Create(Job job)
-        {
-            return new JobViewModel
+        public static JobViewModel Create(Job source) =>
+            new JobViewModel
             {
-
+                ApplicationAreas = source.ApplicationAreas,
+                BusinessBranches = source.BusinessBranches,
+                ContactPerson = EmployeeViewModel.Create(source.ContactPerson),
+                EntryLevels = source.EntryLevels,
+                Id = source.Id,
+                Location = source.Location,
+                MonthlySalaryInEuros = source.MonthlySalaryInEuros,
+                Profile = new List<string>(source.Profile.Split('\n', StringSplitOptions.RemoveEmptyEntries)),
+                Tasks = new List<string>(source.Tasks.Split('\n', StringSplitOptions.RemoveEmptyEntries)),
+                Title = source.Title
             };
-        }
     }
 }

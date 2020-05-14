@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+using Alten.Career.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Alten.Career.ViewModels
 {
@@ -26,5 +27,15 @@ namespace Alten.Career.ViewModels
         [StringLength(32)]
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
+
+        public static EmployeeViewModel Create(Employee source) =>
+            new EmployeeViewModel
+            {
+                Email = source.Email,
+                FirstName = source.FirstName,
+                JobTitle = source.JobTitle,
+                LastName = source.LastName,
+                Phone = source.Phone
+            };
     }
 }

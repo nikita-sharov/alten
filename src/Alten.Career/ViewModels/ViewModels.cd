@@ -21,9 +21,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Alten.Career.ViewModels.EmployeeViewModel">
-    <Position X="5.5" Y="2.75" Width="2.25" />
+    <Position X="5.5" Y="1.75" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAACAAAIAAAAAAAAAAAAAAAAAAAAAAIAAIAAg=</HashCode>
+      <HashCode>AAAAAEAAACAAAIAAAAAACAAAAAAAAEAAAAAAIAAIAAg=</HashCode>
       <FileName>ViewModels\EmployeeViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>

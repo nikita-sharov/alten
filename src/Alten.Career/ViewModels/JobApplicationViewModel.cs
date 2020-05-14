@@ -90,28 +90,28 @@ namespace Alten.Career.ViewModels
         [Display(Name = "I accept the privacy note.")]
         public bool PrivacyNoteAccepted { get; set; }
 
-        public static JobApplicationViewModel Create(JobApplication application) =>
+        public static JobApplicationViewModel Create(JobApplication source) =>
             new JobApplicationViewModel
             {
-                AcademicTitle = application.AcademicTitle,
-                Address = application.Address,
-                Attachments = application.Attachments,
-                Citizenship = application.Citizenship,
-                DateOfBirth = application.DateOfBirth,
-                Email = application.Email,
-                FirstName = application.FirstName,
-                Job = JobViewModel.Create(application.Job),
-                LastName = application.LastName,
-                Location = application.Location,
-                PostalCode = application.PostalCode,
-                PrimaryPhone = application.PrimaryPhone,
+                AcademicTitle = source.AcademicTitle,
+                Address = source.Address,
+                Attachments = source.Attachments,
+                Citizenship = source.Citizenship,
+                DateOfBirth = source.DateOfBirth,
+                Email = source.Email,
+                FirstName = source.FirstName,
+                Job = JobViewModel.Create(source.Job),
+                LastName = source.LastName,
+                Location = source.Location,
+                PostalCode = source.PostalCode,
+                PrimaryPhone = source.PrimaryPhone,
                 PrivacyNoteAccepted = true,
-                RegisteredAsUnemployed = application.RegisteredAsUnemployed,
-                Salutation = application.Salutation,
-                SecondaryPhone = application.SecondaryPhone,
-                ShortLetter = application.ShortLetter,
-                StartingDate = application.StartingDate,
-                YearlySalaryInEuros = application.YearlySalaryInEuros
+                RegisteredAsUnemployed = source.RegisteredAsUnemployed,
+                Salutation = source.Salutation,
+                SecondaryPhone = source.SecondaryPhone,
+                ShortLetter = source.ShortLetter,
+                StartingDate = source.StartingDate,
+                YearlySalaryInEuros = source.YearlySalaryInEuros
             };
     }
 }
