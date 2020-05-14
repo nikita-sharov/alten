@@ -1,5 +1,4 @@
 using Alten.Career.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Net.Mime;
@@ -7,7 +6,7 @@ using System.Text;
 
 namespace Alten.Career.ViewModels
 {
-    public class TestData
+    public static class TestData
     {
         public static readonly JobViewModel YourJob = new JobViewModel
         {
