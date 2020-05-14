@@ -1,14 +1,11 @@
-﻿using Alten.Career.Models;
+using Alten.Career.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 
 namespace Alten.Career.ViewModels
 {
-    // TODO: Kick description
-    ////[Description("Job description")]
     public class JobViewModel
     {
         private static readonly IFormatProvider SalaryFormatInfo = new NumberFormatInfo
@@ -16,8 +13,8 @@ namespace Alten.Career.ViewModels
             NumberGroupSeparator = "."
         };
 
-        ////[Display(Name = "Reference number")]
-        public int ReferenceNumber { get; set; }
+        [Display(Name = "Reference number")]
+        public int Id { get; set; }
 
         [DataType(DataType.MultilineText)]
         public string Header { get; set; } = "Looking for an exciting and permanent job offering a wide variety of different assignments? As a member of an interdisciplinary team, you will work on future-orientated projects in various high-tech sectors. Support our team as";
@@ -33,18 +30,12 @@ namespace Alten.Career.ViewModels
         [Display(Name = "Areas of application")]
         public ApplicationAreas ApplicationAreas { get; set; }
 
-        ////[Display(Name = "Business branches")]
         public BusinessBranches BusinessBranches { get; set; }
 
-        ////[Display(Name = "Entry levels")]
         public EntryLevels EntryLevels { get; set; }
 
-        // TODO: Fix DataType.
-        [DataType(DataType.MultilineText)]
         public ICollection<string> Tasks { get; set; }
 
-        // TODO: Fix DataType.
-        [DataType(DataType.MultilineText)]
         public ICollection<string> Profile { get; set; }
 
         /// <summary>
@@ -60,5 +51,13 @@ namespace Alten.Career.ViewModels
         public string Footer { get; set; } = "Are you looking for interesting tasks and a permanent employment contract? Then apply now using our online application form.";
 
         private string MonthlySalaryText => string.Format(SalaryFormatInfo, "{0:#,###},-- €", MonthlySalaryInEuros);
+
+        public static JobViewModel Create(Job job)
+        {
+            return new JobViewModel
+            {
+
+            };
+        }
     }
 }

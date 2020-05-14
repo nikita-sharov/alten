@@ -15,7 +15,7 @@ namespace Alten.Career.ViewModels
     {
         public static readonly JobViewModel YourJob = new JobViewModel
         {
-            ReferenceNumber = 3461,
+            Id = 3461,
             Title = "Software Developer (m/f/d) C#",
             Location = "Graz",
             ApplicationAreas = ApplicationAreas.SoftwareDevelopment,

@@ -1,6 +1,12 @@
 # ALTEN
 
+This repository showcases a sample based around creation of job offerings and job applications for the ALTEN Group.
+
 ![Job](media/job.png)
+
+## View Models
+
+`JobViewModelTests.cs`
 
 ```csharp
 public static readonly JobViewModel YourJob = new JobViewModel

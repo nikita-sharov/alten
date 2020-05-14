@@ -17,6 +17,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alten.Career.Tests", "tests
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alten.Jama.Tests", "tests\Alten.Jama.Tests\Alten.Jama.Tests.csproj", "{317D747B-6C8B-443C-A4DB-80EF8200516B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alten.Tests", "Alten.Tests\Alten.Tests.csproj", "{F4579181-2072-49D2-807B-BB097E5E7130}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6BAC307-2654-43A3-BB6E-5930B2BFE3DC}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +53,10 @@ Global
 		{317D747B-6C8B-443C-A4DB-80EF8200516B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{317D747B-6C8B-443C-A4DB-80EF8200516B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{317D747B-6C8B-443C-A4DB-80EF8200516B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4579181-2072-49D2-807B-BB097E5E7130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4579181-2072-49D2-807B-BB097E5E7130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4579181-2072-49D2-807B-BB097E5E7130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4579181-2072-49D2-807B-BB097E5E7130}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +67,7 @@ Global
 		{B1F99F67-62A7-44F0-BF92-05866E48DE14} = {9C4B9919-76E3-46B1-870B-24231CC95416}
 		{CE95AAC1-79E8-4199-8C1F-86579FFD7186} = {AE447B40-EC89-432D-98DE-866A13636269}
 		{317D747B-6C8B-443C-A4DB-80EF8200516B} = {AE447B40-EC89-432D-98DE-866A13636269}
+		{F4579181-2072-49D2-807B-BB097E5E7130} = {AE447B40-EC89-432D-98DE-866A13636269}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9227128-0E59-4ABC-BDBA-82C5FBAF7F81}

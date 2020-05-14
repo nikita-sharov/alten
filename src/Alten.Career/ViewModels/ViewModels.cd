@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Alten.Career.ViewModels.JobViewModel">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>BAACAAAAIAAAAEAABAIIAAAAAAEAAEAAABQIAAAARAE=</HashCode>
+      <FileName>ViewModels\JobViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ContactPerson" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Alten.Career.ViewModels.JobApplicationViewModel">
+    <Position X="2.25" Y="5.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEIAACAAgEFAIAIAAAAEAAAyAkACAAAgAICAAAg=</HashCode>
+      <FileName>ViewModels\JobApplicationViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Job" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Alten.Career.ViewModels.EmployeeViewModel">
+    <Position X="5.5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAIAAAAAAAAAAAAAAAAAAAAAAIAAIAAg=</HashCode>
+      <FileName>ViewModels\EmployeeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

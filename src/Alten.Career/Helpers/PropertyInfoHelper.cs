@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq.Expressions;
 using System.Reflection;
 
@@ -18,7 +18,7 @@ namespace Alten.Career.Helpers
                 }
             }
 
-            return memberExpression.Member as PropertyInfo;
+            return memberExpression?.Member as PropertyInfo;
         }
     }
 }

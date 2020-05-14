@@ -1,4 +1,4 @@
-﻿using Alten.Career.Models;
+using Alten.Career.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,6 +7,8 @@ namespace Alten.Career.ViewModels
 {
     public class JobApplicationViewModel
     {
+        public JobViewModel Job { get; set; }
+
         [Display(Description = "Only for addressing properly and personally.")]
         public Salutation Salutation { get; set; }
 
@@ -87,5 +89,29 @@ namespace Alten.Career.ViewModels
 
         [Display(Name = "I accept the privacy note.")]
         public bool PrivacyNoteAccepted { get; set; }
+
+        public static JobApplicationViewModel Create(JobApplication application) =>
+            new JobApplicationViewModel
+            {
+                AcademicTitle = application.AcademicTitle,
+                Address = application.Address,
+                Attachments = application.Attachments,
+                Citizenship = application.Citizenship,
+                DateOfBirth = application.DateOfBirth,
+                Email = application.Email,
+                FirstName = application.FirstName,
+                Job = JobViewModel.Create(application.Job),
+                LastName = application.LastName,
+                Location = application.Location,
+                PostalCode = application.PostalCode,
+                PrimaryPhone = application.PrimaryPhone,
+                PrivacyNoteAccepted = true,
+                RegisteredAsUnemployed = application.RegisteredAsUnemployed,
+                Salutation = application.Salutation,
+                SecondaryPhone = application.SecondaryPhone,
+                ShortLetter = application.ShortLetter,
+                StartingDate = application.StartingDate,
+                YearlySalaryInEuros = application.YearlySalaryInEuros
+            };
     }
 }

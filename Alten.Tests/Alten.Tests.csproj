@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <RootNamespace>Alten</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Career\Models\" />
+    <Folder Include="Career\ViewModels\" />
+    <Folder Include="Career\Services\" />
+    <Folder Include="Jama\RestSharp\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\Alten.Career\Alten.Career.csproj" />
+    <ProjectReference Include="..\src\Alten.Jama.RestSharp\Alten.Jama.RestSharp.csproj" />
+    <ProjectReference Include="..\src\Alten.Jama\Alten.Jama.csproj" />
+  </ItemGroup>
+
+</Project>
