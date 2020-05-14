@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 
 namespace Alten.Career.Models
@@ -13,7 +13,7 @@ namespace Alten.Career.Models
         AutomotiveEngineering = 1,
 
         [Description("Electric & Electronic Engineering")]
-        ElectricAndElectornicEngineering = 2,
+        ElectricAndElectronicEngineering = 2,
 
         [Description("Semiconductor Technology")]
         SemiconductorTechnology = 4,
