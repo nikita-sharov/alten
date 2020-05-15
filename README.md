@@ -4,6 +4,10 @@ This repository showcases a sample based around creation of job offerings and jo
 
 ## MVVM
 
+`Job.cd`
+
+![Job](media/job.png)
+
 `JobViewModelPool.cs`
 
 ```csharp
@@ -41,9 +45,9 @@ public static readonly JobViewModel YourJob = new JobViewModel
 };
 ```
 
-`Job.cd`
+`JobApplication.cd`
 
-![Job](media/job.png)
+![JobApplication](media/job-application.png)
 
 `JobApplicationViewModelPool.cs`
 
@@ -76,6 +80,4 @@ public static readonly JobApplicationViewModel MyJobApplication = new JobApplica
 };
 ```
 
-`JobApplication.cd`
 
-![JobApplication](media/job-application.png)
