@@ -2,17 +2,7 @@
 
 This repository showcases a sample based around creation of job offerings and job applications for the ALTEN Group.
 
-## Models
-
-`Job.cd`
-
-![Job](media/job.png)
-
-`JobApplication.cd`
-
-![JobApplication](media/job-application.png)
-
-## ViewModels
+## MVVM
 
 `JobViewModelPool.cs`
 
@@ -51,6 +41,10 @@ public static readonly JobViewModel YourJob = new JobViewModel
 };
 ```
 
+`Job.cd`
+
+![Job](media/job.png)
+
 `JobApplicationViewModelPool.cs`
 
 ```csharp
@@ -81,3 +75,7 @@ public static readonly JobApplicationViewModel MyJobApplication = new JobApplica
     PrivacyNoteAccepted = true
 };
 ```
+
+`JobApplication.cd`
+
+![JobApplication](media/job-application.png)
