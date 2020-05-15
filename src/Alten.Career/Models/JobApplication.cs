@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -54,6 +54,7 @@ namespace Alten.Career.Models
 
         public DateTime StartingDate { get; set; }
 
+        [Range(0, int.MaxValue)]
         public int? YearlySalaryInEuros { get; set; }
 
         public bool? RegisteredAsUnemployed { get; set; }

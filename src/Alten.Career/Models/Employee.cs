@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace Alten.Career.Models
 {
@@ -22,7 +22,7 @@ namespace Alten.Career.Models
         [MaxLength(128)]
         public string Email { get; set; }
 
-        [MaxLength(64)]
+        [MaxLength(32)]
         public string Phone { get; set; }
     }
 }

@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.Linq;
 
 namespace Alten.Career.ViewModels
 {
-    public class JobViewModel
+    public class JobViewModel : IValidatableObject
     {
         private static readonly IFormatProvider SalaryFormatInfo = new NumberFormatInfo
         {
@@ -41,6 +42,7 @@ namespace Alten.Career.ViewModels
         /// <summary>
         /// Lower inclusive bound of the salary range, gross, in euros.
         /// </summary>
+        [Range(1, int.MaxValue)]
         public int MonthlySalaryInEuros { get; set; }        
 
         public string SalaryText => $"Salary from {MonthlySalaryText} gross per month on basis 38,5 h/week with the explicit willingness to overpay depending on qualification and experience.";
@@ -62,9 +64,30 @@ namespace Alten.Career.ViewModels
                 Id = source.Id,
                 Location = source.Location,
                 MonthlySalaryInEuros = source.MonthlySalaryInEuros,
-                Profile = new List<string>(source.Profile.Split('\n', StringSplitOptions.RemoveEmptyEntries)),
-                Tasks = new List<string>(source.Tasks.Split('\n', StringSplitOptions.RemoveEmptyEntries)),
+                Profile = source.Profile.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries).ToList(),
+                Tasks = source.Tasks.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries).ToList(),
                 Title = source.Title
             };
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            const string FormatString = "{0} must not be longer than {1} characters.";
+
+            var tasks = string.Join(Environment.NewLine, Tasks);
+            if (tasks.Length > Job.TasksMaxLength)
+            {
+                yield return new ValidationResult(
+                    string.Format(FormatString, nameof(Tasks), Job.TasksMaxLength),
+                    new[] { nameof(Tasks) });
+            }
+
+            var profile = string.Join(Environment.NewLine, Profile);
+            if (profile.Length > Job.ProfileMaxLength)
+            {
+                yield return new ValidationResult(
+                    string.Format(FormatString, nameof(Profile), Job.ProfileMaxLength),
+                    new[] { nameof(Profile) });
+            }
+        }
     }
 }

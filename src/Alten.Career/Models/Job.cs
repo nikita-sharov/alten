@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Alten.Career.Models
 {
     public sealed class Job
     {
+        internal const int TasksMaxLength = 1024;
+        internal const int ProfileMaxLength = 1024;
+
         public int Id { get; set; }
 
         [Required]
@@ -22,13 +24,14 @@ namespace Alten.Career.Models
         public EntryLevels EntryLevels { get; set; }
 
         [Required]
-        [MaxLength(1024)]
+        [MaxLength(TasksMaxLength)]
         public string Tasks { get; set; }
 
         [Required]
-        [MaxLength(1024)]
+        [MaxLength(ProfileMaxLength)]
         public string Profile { get; set; }
 
+        [Range(1, int.MaxValue)]
         public int MonthlySalaryInEuros { get; set; }
 
         public int ContactPersonId { get; set; }
