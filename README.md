@@ -14,7 +14,7 @@ This repository showcases a sample based around creation of job offerings and jo
 
 ## ViewModels
 
-`JobViewModelReference.cs`
+`JobViewModelPool.cs`
 
 ```csharp
 public static readonly JobViewModel YourJob = new JobViewModel
@@ -49,9 +49,11 @@ public static readonly JobViewModel YourJob = new JobViewModel
         Email = "career@alten.at"
     }
 };
+```
 
-`JobApplicationViewModelReference.cs`
+`JobApplicationViewModelPool.cs`
 
+```csharp
 public static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
 {
     Salutation = Salutation.Mr,
