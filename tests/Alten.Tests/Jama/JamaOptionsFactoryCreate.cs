@@ -1,4 +1,4 @@
-using Alten.Jama.Tests;
+﻿using Alten.Jama.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Alten.Jama
@@ -7,7 +7,7 @@ namespace Alten.Jama
     public class JamaOptionsFactoryCreate
     {
         [TestMethod]
-        public void ReturnsFullyInitializedOptions()
+        public void Create()
         {
             JamaOptions options = JamaOptionsFactory.Create();
 

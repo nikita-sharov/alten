@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace Alten.Jama.Models
 {
-    public sealed class ItemTypeRequest : IValidatableObject
+    public class ItemTypeRequest : IValidatableObject
     {
         private static IEnumerable<string> RequestableCategories = new HashSet<string>
         {

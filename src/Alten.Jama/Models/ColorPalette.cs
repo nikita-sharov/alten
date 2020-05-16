@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace Alten.Jama.Models
 {
-    public sealed class ColorPalette
+    public static class ColorPalette
     {
         public static readonly IEnumerable<string> HexCodes =
             new string[]

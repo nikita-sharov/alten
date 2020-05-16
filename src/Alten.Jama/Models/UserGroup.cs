@@ -1,5 +1,8 @@
-﻿namespace Alten.Jama.Models
+using System.Text.Json.Serialization;
+
+namespace Alten.Jama.Models
 {
+    // See: https://rest.jamasoftware.com/#datatype_UserGroup
     public sealed class UserGroup
     {
         public int Id { get; set; }
@@ -12,7 +15,8 @@
         /// The project ID of a project-level group.
         /// </summary>
         /// <value><c>null</c> for organization-level groups.</value>
-        /// <seealso href="https://actin-trial.jamacloud.com/help/ah/en/administration/project-administrator/manage-project-users/manage-project-groups.html"/>
-        public int? Project { get; set; }
+        /// <seealso href="https://help.jamasoftware.com/ah/en/administration/project-administrator/manage-project-users/manage-project-groups.html"/>
+        [JsonPropertyName("project")]
+        public int? ProjectId { get; set; }
     }
 }

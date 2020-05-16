@@ -1,5 +1,6 @@
-﻿namespace Alten.Jama
+namespace Alten.Jama
 {
+    // See: https://dev.jamasoftware.com/api/#auth
     public sealed class JamaOptions
     {
         public const int MaxResultsDefault = 20;

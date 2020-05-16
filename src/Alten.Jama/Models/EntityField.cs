@@ -1,4 +1,4 @@
-﻿namespace Alten.Jama.Models
+namespace Alten.Jama.Models
 {
     public static class EntityField
     {

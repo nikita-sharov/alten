@@ -1,7 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Alten.Jama.Models
 {
+    // See: https://rest.jamasoftware.com/#datatype_RequestUserGroup
     public sealed class UserGroupRequest
     {
         [Required]
@@ -9,6 +11,7 @@ namespace Alten.Jama.Models
 
         public string Description { get; set; }
 
-        public int? Project { get; set; }
+        [JsonPropertyName("project")]
+        public int? ProjectId { get; set; }
     }
 }

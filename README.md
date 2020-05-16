@@ -1,6 +1,6 @@
 # ALTEN
 
-This repository showcases a sample based around creation of job offerings and job applications for the ALTEN Group.
+This **Git** repository showcases a sample based around creation of job offerings and job applications for the ALTEN Group.
 
 ## MVVM
 

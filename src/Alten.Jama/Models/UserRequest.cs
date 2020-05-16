@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace Alten.Jama.Models
 {
+    // See: https://rest.jamasoftware.com/#datatype_RequestUser
     public class UserRequest
     {
         [StringLength(200)]

@@ -1,9 +1,8 @@
 using Alten.Jama.Models;
-using Alten.Jama.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
-namespace Alten.Jama.Tests.Services
+namespace Alten.Jama.Services
 {
     [TestClass]
     public class RestSharpItemTypeServiceTests

@@ -1,8 +1,9 @@
-﻿using Alten.Jama.Models;
+using Alten.Jama.Models;
 using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
 {
+    // See: https://rest.jamasoftware.com/#endpoint_items
     public interface IItemService
     {
         Task DeleteAsync(int itemId);

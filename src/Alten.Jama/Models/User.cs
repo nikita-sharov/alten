@@ -1,8 +1,8 @@
-﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Alten.Jama.Models
 {
+    // See: https://rest.jamasoftware.com/#datatype_User
     public class User
     {
         public int Id { get; set; }
