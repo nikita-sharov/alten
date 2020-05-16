@@ -77,7 +77,7 @@ namespace Alten.Jama.Services
             throw new NotImplementedException();
         }
 
-        public Task<MetaResponse> PostAsync(UserRequest body)
+        public Task<MetaResponse> CreateAsync(UserRequest body)
         {
             Debug.Assert(!string.IsNullOrWhiteSpace(body.Username));
             Debug.Assert(body.Password.Length >= JamaOptions.MinPasswordLength);
@@ -90,14 +90,11 @@ namespace Alten.Jama.Services
             return _client.PostAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PutActiveAsync(int userId, ActiveStatusRequest body)
-        {
-            IRestRequest request = RestRequestFactory.Create($"/users/{userId}/active");
-            request.AddJsonBody(body);
-            return _client.PutAsync<MetaResponse>(request);
-        }
+        public Task<MetaResponse> ActivateAsync(int userId) => PutActiveAsync(userId, true);
 
-        public Task<MetaResponse> PutAsync(int userId, UserRequest body)
+        public Task<MetaResponse> DeactivateAsync(int userId) => PutActiveAsync(userId, false);
+
+        public Task<MetaResponse> UpdateAsync(int userId, UserRequest body)
         {
             if (body.Username != null)
             {
@@ -128,6 +125,14 @@ namespace Alten.Jama.Services
             IRestRequest request = RestRequestFactory.Create($"/users/{userId}");
             request.AddJsonBody(body);
             return  _client.PutAsync<MetaResponse>(request);
+        }
+
+        private Task<MetaResponse> PutActiveAsync(int userId, bool active)
+        {
+            IRestRequest request = RestRequestFactory.Create($"/users/{userId}/active");
+            var body = new { active };
+            request.AddJsonBody(body);
+            return _client.PutAsync<MetaResponse>(request);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Alten.Jama.Models;
+using Alten.Jama.Models;
 using RestSharp;
 using System.Threading.Tasks;
 
@@ -22,14 +22,14 @@ namespace Alten.Jama.Services
             return _client.GetAsync<DataResponse<ItemType>>(request);
         }
 
-        public Task<MetaResponse> PostAsync(ItemTypeRequest body)
+        public Task<MetaResponse> CreateAsync(ItemTypeRequest body)
         {
             IRestRequest request = RestRequestFactory.Create("/itemtypes");
             request.AddJsonBody(body);
             return _client.PostAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PostFieldAsync(int itemTypeId, ItemTypeFieldRequest body)
+        public Task<MetaResponse> CreateFieldAsync(int itemTypeId, ItemTypeFieldRequest body)
         {
             IRestRequest request = RestRequestFactory.Create($"/itemtypes/{itemTypeId}/fields");
             request.AddJsonBody(request);

@@ -1,5 +1,6 @@
-﻿using Alten.Jama.Models;
+using Alten.Jama.Models;
 using RestSharp;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
@@ -16,7 +17,7 @@ namespace Alten.Jama.Services
             return _client.ExecuteAsync(request, Method.DELETE);
         }
 
-        public Task DeleteUserAsync(int userGroupId, int userId)
+        public Task RemoveUserAsync(int userGroupId, int userId)
         {
             IRestRequest request = RestRequestFactory.Create($"/usergroups/{userGroupId}/users/{userId}");
             return _client.ExecuteAsync(request, Method.DELETE);
@@ -46,25 +47,37 @@ namespace Alten.Jama.Services
             return _client.GetAsync<DataListResponse<User>>(request);
         }
 
-        public Task<MetaResponse> PostAsync(UserGroupRequest body)
+        public Task<MetaResponse> CreateAsync(UserGroupRequest body)
         {
             IRestRequest request = RestRequestFactory.Create("/usergroups");
             request.AddJsonBody(body);
             return _client.PostAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PostUserAsync(int userGroupId, GroupUserRequest body)
+        public Task<MetaResponse> AddUserAsync(int userGroupId, int userId)
         {
             IRestRequest request = RestRequestFactory.Create($"/usergroups/{userGroupId}/users");
+            var body = new GroupUserRequest
+            {
+                UserId = userId
+            };
+
             request.AddJsonBody(body);
             return _client.PostAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PutAsync(int userGroupId, UserGroupRequest body)
+        public Task<MetaResponse> UpdateAsync(int userGroupId, UserGroupRequest body)
         {
             IRestRequest request = RestRequestFactory.Create($"/usergroups/{userGroupId}");
             request.AddJsonBody(body);
             return _client.PutAsync<MetaResponse>(request);
+        }
+
+        // See: https://rest.jamasoftware.com/#datatype_RequestGroupUser
+        private sealed class GroupUserRequest
+        {
+            [JsonPropertyName("user")]
+            public int UserId { get; set; }
         }
     }
 }

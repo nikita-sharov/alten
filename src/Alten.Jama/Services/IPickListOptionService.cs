@@ -8,6 +8,6 @@ namespace Alten.Jama.Services
     {
         Task<DataResponse<PickListOption>> GetAsync(int pickListOptionId);
 
-        Task<MetaResponse> PutAsync(int pickListOptionId, PickListOptionRequest body);
+        Task<MetaResponse> UpdateAsync(int pickListOptionId, PickListOptionRequest body);
     }
 }

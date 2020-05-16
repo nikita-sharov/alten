@@ -44,7 +44,7 @@ namespace Alten.Career.ViewModels
                     Email = contactPerson.Email
                 };
 
-                MetaResponse createdResponse = await _usersApi.PostAsync(request);
+                MetaResponse createdResponse = await _usersApi.CreateAsync(request);
                 DataResponse<User> userDataWrapper = await _usersApi.GetAsync(createdResponse.Meta.Id.Value);
                 return userDataWrapper.Data;
             }
@@ -85,7 +85,7 @@ namespace Alten.Career.ViewModels
                     }
                 };
 
-                MetaResponse createdResponse = await _projectsApi.PostAsync(request);
+                MetaResponse createdResponse = await _projectsApi.CreateAsync(request);
                 DataResponse<Project> projectDataWrapper = await _projectsApi.GetAsync(createdResponse.Meta.Id.Value);
                 project = projectDataWrapper.Data;
             }

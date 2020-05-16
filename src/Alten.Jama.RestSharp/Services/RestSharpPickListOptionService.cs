@@ -17,7 +17,7 @@ namespace Alten.Jama.Services
             return _client.GetAsync<DataResponse<PickListOption>>(request);
         }
 
-        public Task<MetaResponse> PutAsync(int pickListOptionId, PickListOptionRequest body)
+        public Task<MetaResponse> UpdateAsync(int pickListOptionId, PickListOptionRequest body)
         {
             IRestRequest request = RestRequestFactory.Create($"/picklistoptions/{pickListOptionId}");
             request.AddJsonBody(body);

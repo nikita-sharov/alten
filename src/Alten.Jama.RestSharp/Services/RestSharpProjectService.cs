@@ -21,7 +21,7 @@ namespace Alten.Jama.Services
 
         public RestSharpProjectService(IRestClient client) => _client = client;
 
-        public Task DeleteItemTypeAsync(int projectId, int itemTypeId)
+        public Task RemoveItemTypeAsync(int projectId, int itemTypeId)
         {
             IRestRequest request = RestRequestFactory.Create($"/projects/{projectId}/itemtypes/{itemTypeId}");
             return _client.ExecuteAsync(request, Method.DELETE);
@@ -51,7 +51,7 @@ namespace Alten.Jama.Services
             return _client.GetAsync<DataListResponse<Tag>>(request);
         }
 
-        public Task<MetaResponse> PostAsync(ProjectRequest body)
+        public Task<MetaResponse> CreateAsync(ProjectRequest body)
         {
             if (body.IsFolder)
             {
@@ -75,21 +75,21 @@ namespace Alten.Jama.Services
             return _client.PostAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PostAttachment(int projectId, AttachmentRequest body)
+        public Task<MetaResponse> CreateAttachmentAsync(int projectId, AttachmentRequest body)
         {
             IRestRequest request = RestRequestFactory.Create($"/projects/{projectId}/attachments");
             request.AddJsonBody(body);
             return _client.PostAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PutAsync(int projectId, ProjectRequest body)
+        public Task<MetaResponse> UpdateAsync(int projectId, ProjectRequest body)
         {
             IRestRequest request = RestRequestFactory.Create($"/projects/{projectId}");
             request.AddJsonBody(body);
             return _client.PutAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PutItemTypeAsync(int projectId, int itemTypeId)
+        public Task<MetaResponse> AddItemTypeAsync(int projectId, int itemTypeId)
         {
             IRestRequest request = RestRequestFactory.Create($"/projects/{projectId}/itemtypes/{itemTypeId}");
             return _client.PutAsync<MetaResponse>(request);

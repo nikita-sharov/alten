@@ -1,20 +1,18 @@
-﻿using Alten.Jama.Models;
-using Alten.Jama.Tests.Services;
+using Alten.Jama.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
 {
     [TestClass]
-    public sealed class RestSharpPicklistServiceTests
+    public sealed class RestSharpPickListServiceTests
     {
         public const int PickListId = 623;
 
         private readonly IPickListService _service = RestSharpServiceFactory.Create<RestSharpPickListService>();
 
         [TestMethod]        
-        public async Task PostAsync()
+        public async Task CreateAsync()
         {
             var body = new PickListRequest
             {
@@ -22,7 +20,7 @@ namespace Alten.Jama.Services
                 Description = "Only for addressing properly and personally."
             };
 
-            MetaResponse response = await _service.PostAsync(body);
+            MetaResponse response = await _service.CreateAsync(body);
             Assert.IsNotNull(response);
         }
 
@@ -36,14 +34,14 @@ namespace Alten.Jama.Services
         [TestMethod]
         [DataRow(PickListId, "Ms.")]
         [DataRow(PickListId, "Mx.")]
-        public async Task PostOptionAsync(int pickListId, string name)
+        public async Task CreateOptionAsync(int pickListId, string name)
         {
             var body = new PickListOptionRequest
             {
                 Name = name
             };
 
-            MetaResponse response = await _service.PostOptionAsync(pickListId, body);
+            MetaResponse response = await _service.CreateOptionAsync(pickListId, body);
             Assert.IsNotNull(response);
         }
 

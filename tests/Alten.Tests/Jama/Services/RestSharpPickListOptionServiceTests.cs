@@ -1,5 +1,4 @@
-﻿using Alten.Jama.Models;
-using Alten.Jama.Tests.Services;
+using Alten.Jama.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
@@ -21,7 +20,7 @@ namespace Alten.Jama.Services
         }
 
         [TestMethod]
-        public async Task PutAsync()
+        public async Task UpdateAsync()
         {
             var body = new PickListOptionRequest
             {
@@ -30,7 +29,7 @@ namespace Alten.Jama.Services
                 Default = true
             };
 
-            MetaResponse response = await _service.PutAsync(PickListOptionId, body);
+            MetaResponse response = await _service.UpdateAsync(PickListOptionId, body);
             Assert.IsNotNull(response);
         }
     }

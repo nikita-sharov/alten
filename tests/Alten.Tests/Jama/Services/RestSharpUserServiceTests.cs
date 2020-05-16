@@ -10,7 +10,7 @@ namespace Alten.Jama.Services
         private readonly IUserService _service = RestSharpServiceFactory.Create<RestSharpUserService>();
 
         [TestMethod]
-        public async Task PostAsync()
+        public async Task CreateAsync()
         {
             var body = new UserRequest
             {
@@ -23,15 +23,14 @@ namespace Alten.Jama.Services
                 Username = "bstankovic@alten.at"
             };
 
-            MetaResponse response = await _service.PostAsync(body);
+            MetaResponse response = await _service.CreateAsync(body);
             Assert.IsNotNull(response);
         }
 
         [TestMethod]
-        [DataRow(44)]
-        public async Task GetAsync(int userId)
+        public async Task GetAsync()
         {
-            DataResponse<User> response = await _service.GetAsync(userId);
+            DataResponse<User> response = await _service.GetAsync(userId: 44);
             Assert.IsNotNull(response);
         }
 

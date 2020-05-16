@@ -6,6 +6,8 @@ namespace Alten.Jama.Services
     // See: https://rest.jamasoftware.com/#endpoint_users
     public interface IUserService
     {
+        Task<MetaResponse> CreateAsync(UserRequest body);
+
         Task<DataResponse<User>> GetAsync(int userId);
 
         Task<DataListResponse<User>> GetListAsync(
@@ -22,13 +24,15 @@ namespace Alten.Jama.Services
 
         Task<DataListResponse<Filter>> GetCurrentFilterListAsync(int startAt, int maxResults);
 
-        Task<MetaResponse> PostAsync(UserRequest body);
+        // See: https://rest.jamasoftware.com/#operation_setActiveStatus
+        Task<MetaResponse> ActivateAsync(int userId);
 
-        Task<MetaResponse> PutActiveAsync(int userId, ActiveStatusRequest body);
+        // See: https://rest.jamasoftware.com/#operation_setActiveStatus
+        Task<MetaResponse> DeactivateAsync(int userId);
 
         /// <summary>
         /// Updates the specified user ignoring <see cref="UserRequest"/>'s properties having null values.
         /// </summary>
-        Task<MetaResponse> PutAsync(int userId, UserRequest body);
+        Task<MetaResponse> UpdateAsync(int userId, UserRequest body);
     }
 }

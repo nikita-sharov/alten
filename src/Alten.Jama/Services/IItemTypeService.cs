@@ -5,13 +5,13 @@ namespace Alten.Jama.Services
 {
     // See: https://rest.jamasoftware.com/#endpoint_itemtypes
     public interface IItemTypeService
-    {
-        Task<DataListResponse<ItemType>> GetListAsync(int startAt, int maxResults);
+    {        
+        Task<MetaResponse> CreateAsync(ItemTypeRequest body);
 
-        Task<MetaResponse> PostAsync(ItemTypeRequest body);
+        Task<MetaResponse> CreateFieldAsync(int itemTypeId, ItemTypeFieldRequest body);
 
         Task<DataResponse<ItemType>> GetAsync(int itemTypeId);
 
-        Task<MetaResponse> PostFieldAsync(int itemTypeId, ItemTypeFieldRequest body);
+        Task<DataListResponse<ItemType>> GetListAsync(int startAt, int maxResults);
     }
 }

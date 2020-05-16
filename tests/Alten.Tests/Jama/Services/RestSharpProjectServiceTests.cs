@@ -1,5 +1,4 @@
-﻿using Alten.Jama.Models;
-using Alten.Jama.Tests.Services;
+using Alten.Jama.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -12,7 +11,7 @@ namespace Alten.Jama.Services
         private readonly IProjectService _service = RestSharpServiceFactory.Create<RestSharpProjectService>();
 
         [TestMethod]        
-        public async Task PostAsync()
+        public async Task CreateAsync()
         {
             var body = new ProjectRequest
             {
@@ -23,7 +22,7 @@ namespace Alten.Jama.Services
                 }
             };
 
-            MetaResponse response = await _service.PostAsync(body);
+            MetaResponse response = await _service.CreateAsync(body);
             Assert.IsNotNull(response);
         }
 

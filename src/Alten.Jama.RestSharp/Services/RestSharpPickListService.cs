@@ -1,4 +1,4 @@
-﻿using Alten.Jama.Models;
+using Alten.Jama.Models;
 using RestSharp;
 using System.Diagnostics;
 using System.Net;
@@ -38,14 +38,14 @@ namespace Alten.Jama.Services
             return _client.GetAsync<DataListResponse<PickListOption>>(request);
         }
 
-        public Task<MetaResponse> PostAsync(PickListRequest body)
+        public Task<MetaResponse> CreateAsync(PickListRequest body)
         {
             IRestRequest request = RestRequestFactory.Create("/picklists");
             request.AddJsonBody(body);
             return _client.PostAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PostOptionAsync(int pickListId, PickListOptionRequest body)
+        public Task<MetaResponse> CreateOptionAsync(int pickListId, PickListOptionRequest body)
         {
             IRestRequest request = RestRequestFactory.Create($"/picklists/{pickListId}/options");
             request.AddJsonBody(body);

@@ -12,24 +12,17 @@ namespace Alten.Jama.Services
         private readonly IItemTypeService _service = RestSharpServiceFactory.Create<RestSharpItemTypeService>();
 
         [TestMethod]
-        public async Task PostAsync()
+        public async Task CreateAsync()
         {
             var body = new ItemTypeRequest
             {
                 TypeKey = "JOB",
                 Display = "Job",
                 DisplayPlural = "Jobs",
-                Description = "HR",
-                ////Widgets = new List<ItemTypeWidgetRequest>
-                ////{
-                ////    new ItemTypeWidgetRequest
-                ////    {
-                ////        Widget = ItemTypeWidget.Activities
-                ////    }
-                ////}
+                Description = "HR"
             };
 
-            MetaResponse response = await _service.PostAsync(body);
+            MetaResponse response = await _service.CreateAsync(body);
             Assert.IsNotNull(response);
         }
 
