@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace Alten.Jama.Models
 {
+    // See: https://rest.jamasoftware.com/#datatype_RequestProject
     public class ProjectRequest : IValidatableObject
     {
         /// <summary>
@@ -26,7 +27,7 @@ namespace Alten.Jama.Models
             if ((ProjectKey != null) && IsFolder)
             {
                 yield return new ValidationResult(
-                    "Project folders must not have a project key.", new[] { nameof(ProjectKey) });
+                    "Project folders must not include a project key.", new[] { nameof(ProjectKey) });
             }
         }
     }

@@ -29,7 +29,7 @@ namespace Alten.Jama.Services
             return _client.PostAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PostFieldAsync(int itemTypeId, RequestItemTypeField body)
+        public Task<MetaResponse> PostFieldAsync(int itemTypeId, ItemTypeFieldRequest body)
         {
             IRestRequest request = RestRequestFactory.Create($"/itemtypes/{itemTypeId}/fields");
             request.AddJsonBody(request);

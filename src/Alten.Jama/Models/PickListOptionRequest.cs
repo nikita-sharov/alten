@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace Alten.Jama.Models
 {
+    // See: https://rest.jamasoftware.com/#datatype_RequestPickListOption
     public class PickListOptionRequest : IValidatableObject
     {
         /// <summary>

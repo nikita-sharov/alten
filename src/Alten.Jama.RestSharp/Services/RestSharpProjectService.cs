@@ -1,4 +1,4 @@
-﻿using Alten.Jama.Models;
+using Alten.Jama.Models;
 using RestSharp;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -75,7 +75,7 @@ namespace Alten.Jama.Services
             return _client.PostAsync<MetaResponse>(request);
         }
 
-        public Task<MetaResponse> PostAttachment(int projectId, RequestAttachment body)
+        public Task<MetaResponse> PostAttachment(int projectId, AttachmentRequest body)
         {
             IRestRequest request = RestRequestFactory.Create($"/projects/{projectId}/attachments");
             request.AddJsonBody(body);

@@ -15,7 +15,7 @@ namespace Alten.Career.ViewModels
         [TestMethod]
         public async Task RealTest()
         {
-            IUserService _usersApi = null;
+            ////IUserService _usersApi = null;
 
             Job job = null;
 
@@ -91,16 +91,6 @@ namespace Alten.Career.ViewModels
             }
 
             return project;
-        }
-
-        private async Task<Item> GetJobJamaItemAsync(Job job)
-        {
-            return null;
-        }
-
-        private async Task<Item> GetJobApplicationJamaItem(JobApplication application)
-        {
-            return null;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Alten.Jama.Models;
+using Alten.Jama.Models;
 using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
@@ -14,7 +14,7 @@ namespace Alten.Jama.Services
 
         Task<MetaResponse> PutAsync(int projectId, ProjectRequest body);
 
-        Task<MetaResponse> PostAttachment(int projectId, RequestAttachment body);
+        Task<MetaResponse> PostAttachment(int projectId, AttachmentRequest body);
 
         Task<DataListResponse<ItemType>> GetItemTypeListAsync(int projectId, int startAt, int maxResults);
 

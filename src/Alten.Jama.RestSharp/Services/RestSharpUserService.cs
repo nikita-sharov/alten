@@ -1,4 +1,4 @@
-﻿using Alten.Jama.Models;
+using Alten.Jama.Models;
 using RestSharp;
 using System;
 using System.ComponentModel.DataAnnotations;

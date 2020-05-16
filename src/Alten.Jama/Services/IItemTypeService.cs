@@ -12,6 +12,6 @@ namespace Alten.Jama.Services
 
         Task<DataResponse<ItemType>> GetAsync(int itemTypeId);
 
-        Task<MetaResponse> PostFieldAsync(int itemTypeId, RequestItemTypeField body);
+        Task<MetaResponse> PostFieldAsync(int itemTypeId, ItemTypeFieldRequest body);
     }
 }

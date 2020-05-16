@@ -1,13 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace Alten.Jama.Models
 {
+    // See: https://rest.jamasoftware.com/#datatype_RequestPickList
     public class PickListRequest
     {
-        public const int NameMaxLength = 255;
-
         [Required]
-        [StringLength(NameMaxLength)]
+        [StringLength(255)]
         public string Name { get; set; }
 
         public string Description { get; set; }

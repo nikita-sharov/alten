@@ -2,6 +2,7 @@ using System;
 
 namespace Alten.Jama.Models
 {
+    // See: https://rest.jamasoftware.com/#datatype_Project
     public sealed class Project : ProjectRequest
     {
         public int Id { get; set; }
@@ -14,11 +15,11 @@ namespace Alten.Jama.Models
         public DateTimeOffset ModifiedDate { get; set; }
 
         /// <summary>
-        /// User ID.
+        /// The user ID.
         public int CreatedBy { get; set; }
 
         /// <summary>
-        /// User ID, equals to <see cref="CreatedBy"/> if not modified yet.
+        /// The user ID, equals to <see cref="CreatedBy"/> if not modified yet.
         /// </summary>
         public int ModifiedBy { get; set; }
     }
