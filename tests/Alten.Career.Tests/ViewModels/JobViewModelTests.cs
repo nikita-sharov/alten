@@ -51,46 +51,5 @@ namespace Alten.Career.ViewModels
 
             return userDataListWrapper.Data.Single();
         }
-
-        private async Task<Project> GetJamaProjectAsync()
-        {
-            IProjectService _projectsApi = null;
-
-            Project project = null;
-            PageInfo pageInfo = null;
-
-            do
-            {
-                int startAt = pageInfo?.ResultCount ?? 0;
-                DataListResponse<Project> projectDataListWrapper = await _projectsApi.GetListAsync(
-                    startAt, JamaOptions.MaxResultsMax);
-
-                pageInfo = projectDataListWrapper.Meta.PageInfo;
-                project = projectDataListWrapper.Data.SingleOrDefault(p => p.ProjectKey == "HR");
-                if (project != null)
-                {
-                    return project;
-                }
-            }
-            while ((pageInfo.StartIndex + pageInfo.ResultCount) < pageInfo.TotalResults);
-
-            if (project == null)
-            {
-                var request = new ProjectRequest
-                {
-                    ProjectKey = "HR",
-                    Fields = new Dictionary<string, object>
-                    {
-                        [EntityField.Name] = "Recruiting Management"
-                    }
-                };
-
-                MetaResponse createdResponse = await _projectsApi.CreateAsync(request);
-                DataResponse<Project> projectDataWrapper = await _projectsApi.GetAsync(createdResponse.Meta.Id.Value);
-                project = projectDataWrapper.Data;
-            }
-
-            return project;
-        }
     }
 }

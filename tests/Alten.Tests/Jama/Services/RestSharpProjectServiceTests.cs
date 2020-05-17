@@ -1,6 +1,7 @@
 using Alten.Jama.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
@@ -10,28 +11,55 @@ namespace Alten.Jama.Services
     {
         private readonly IProjectService _service = RestSharpServiceFactory.Create<RestSharpProjectService>();
 
-        [TestMethod]        
-        public async Task CreateAsync()
+        [TestMethod]
+        public async Task EnsureCreatedAsync()
         {
-            var body = new ProjectRequest
-            {
-                ProjectKey = "HR",
-                Fields = new Dictionary<string, object>
-                {
-                    [EntityField.Name] = "Recruiting"
-                }
-            };
-
-            MetaResponse response = await _service.CreateAsync(body);
-            Assert.IsNotNull(response);
+            Project project = await GetOrCreateAsync();
+            Assert.IsNotNull(project);
         }
 
-        [TestMethod]
-        [DataRow(125)]
-        public async Task GetAsync(int projectId)
+        private async Task<Project> GetOrCreateAsync()
         {
-            DataResponse<Project> response = await _service.GetAsync(projectId);
-            Assert.IsNotNull(response);
+            Project project = await FindProject(key: "HR");
+            if (project == null)
+            {
+                var request = new ProjectRequest
+                {
+                    ProjectKey = "HR",
+                    Fields = new Dictionary<string, object>
+                    {
+                        [EntityField.Name] = "Recruiting"
+                    }
+                };
+
+                MetaResponse createdResponse = await _service.CreateAsync(request);
+                DataResponse<Project> dataResponse = await _service.GetAsync(createdResponse.Meta.Id.Value);
+                project = dataResponse.Data;
+            }
+
+            return project;
+        }
+
+        private async Task<Project> FindProject(string key)
+        {
+            Project project = null;
+            int startAt = 0;
+            PageInfo pageInfo = null;
+            do
+            {
+                DataListResponse<Project> dataListResponse = await _service.GetListAsync(
+                    startAt, JamaOptions.MaxResultsMax);
+                project = dataListResponse.Data.SingleOrDefault(p => p.ProjectKey == key);
+                if (project != null)
+                {
+                    break;
+                }
+
+                pageInfo = dataListResponse.Meta.PageInfo;
+                startAt = pageInfo.StartIndex + pageInfo.ResultCount;
+            }
+            while (startAt < pageInfo.TotalResults);
+            return project;
         }
     }
 }

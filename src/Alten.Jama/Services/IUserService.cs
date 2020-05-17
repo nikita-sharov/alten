@@ -6,7 +6,7 @@ namespace Alten.Jama.Services
     // See: https://rest.jamasoftware.com/#endpoint_users
     public interface IUserService
     {
-        Task<MetaResponse> CreateAsync(UserRequest body);
+        Task<MetaResponse> CreateAsync(CreateUserRequest body);
 
         Task<DataResponse<User>> GetAsync(int userId);
 
@@ -33,6 +33,6 @@ namespace Alten.Jama.Services
         /// <summary>
         /// Updates the specified user ignoring <see cref="UserRequest"/>'s properties having null values.
         /// </summary>
-        Task<MetaResponse> UpdateAsync(int userId, UserRequest body);
+        Task<MetaResponse> UpdateAsync(int userId, UpdateUserRequest body);
     }
 }

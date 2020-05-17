@@ -73,7 +73,7 @@ namespace Alten.Jama.Services
             throw new NotImplementedException();
         }
 
-        public Task<MetaResponse> CreateAsync(UserRequest body)
+        public Task<MetaResponse> CreateAsync(CreateUserRequest body)
         {
             IRestRequest request = RestRequestFactory.Create("/users");
             request.AddJsonBody(body);
@@ -84,7 +84,7 @@ namespace Alten.Jama.Services
 
         public Task<MetaResponse> DeactivateAsync(int userId) => PutActiveAsync(userId, false);
 
-        public Task<MetaResponse> UpdateAsync(int userId, UserRequest body)
+        public Task<MetaResponse> UpdateAsync(int userId, UpdateUserRequest body)
         {
             IRestRequest request = RestRequestFactory.Create($"/users/{userId}");
             request.AddJsonBody(body);

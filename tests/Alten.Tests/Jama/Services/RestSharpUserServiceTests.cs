@@ -12,7 +12,7 @@ namespace Alten.Jama.Services
         [TestMethod]
         public async Task CreateAsync()
         {
-            var body = new UserRequest
+            var body = new CreateUserRequest
             {
                 Email = "bstankovic@alten.at",
                 FirstName = "Barbara",
