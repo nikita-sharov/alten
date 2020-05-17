@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
 {
-    public class RestSharpProjectService : IProjectService
+    public sealed class RestSharpProjectService : IProjectService
     {
         private static readonly string[] LinksToInclude = new string[]
         {

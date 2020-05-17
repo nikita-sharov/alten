@@ -1,5 +1,4 @@
-﻿using Alten.Jama.Tests;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Alten.Jama
 {

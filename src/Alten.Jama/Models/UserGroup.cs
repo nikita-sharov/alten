@@ -1,5 +1,3 @@
-using System.Text.Json.Serialization;
-
 namespace Alten.Jama.Models
 {
     // See: https://rest.jamasoftware.com/#datatype_UserGroup

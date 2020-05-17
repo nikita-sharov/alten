@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace Alten.Jama.Models
 {
-    public class DataResponse<T> : MetaResponse 
+    public sealed class DataResponse<T> : MetaResponse
         where T : class
     {
         public Dictionary<string, Link> Links { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
 {
-    public class RestSharpPickListService : IPickListService
+    public sealed class RestSharpPickListService : IPickListService
     {
         private readonly IRestClient _client;
 

@@ -1,7 +1,7 @@
 namespace Alten.Jama.Models
 {
     // See: https://rest.jamasoftware.com/#datatype_PageInfo
-    public class PageInfo
+    public sealed class PageInfo
     {
         public int StartIndex { get; set; }
 

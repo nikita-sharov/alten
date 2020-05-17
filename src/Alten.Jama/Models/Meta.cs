@@ -5,7 +5,7 @@ namespace Alten.Jama.Models
 {
     // See: https://rest.jamasoftware.com/#datatype_MetaWrapper
     // See: https://rest.jamasoftware.com/#datatype_MetaListWrapper    
-    public class Meta
+    public sealed class Meta
     {
         public HttpStatusCode Status { get; set; }
         

@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace Alten.Jama.Serialization
 {
-    public class EnumConverterFactory : JsonConverterFactory
+    public sealed class EnumConverterFactory : JsonConverterFactory
     {
         public override bool CanConvert(Type typeToConvert) => typeToConvert.IsEnum;
 

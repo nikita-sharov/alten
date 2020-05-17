@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace Alten.Jama.Models
 {
     // See: // See: https://help.jamasoftware.com/ah/en/administration/organization-administrator/manage-users/edit-user-details.html
-    public class UpdateUserRequest : UserRequest
+    public sealed class UpdateUserRequest : UserRequest
     {
         [Required]
         public override string Username { get; set; }

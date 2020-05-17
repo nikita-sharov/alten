@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
 {
-    public class RestSharpItemTypeService : IItemTypeService
+    public sealed class RestSharpItemTypeService : IItemTypeService
     {
         private readonly IRestClient _client;
 

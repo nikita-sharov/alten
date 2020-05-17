@@ -1,9 +1,9 @@
-﻿using RestSharp;
+using RestSharp;
 using System.Diagnostics;
 
 namespace Alten.Jama
 {
-    public static class RestRequestFactory
+    internal static class RestRequestFactory
     {
         public static IRestRequest Create(string resource, params string[] include) => 
             Create(resource, null, null, include);

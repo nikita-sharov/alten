@@ -23,7 +23,7 @@ namespace Alten.Jama.Tests.Services
         }
 
         [TestMethod]
-        public async Task GetAsync(int userGroupId)
+        public async Task GetAsync()
         {
             DataResponse<UserGroup> response = await _service.GetAsync(userGroupId: 29);
             Assert.IsNotNull(response);

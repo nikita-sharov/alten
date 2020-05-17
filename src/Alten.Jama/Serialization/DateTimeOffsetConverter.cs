@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 namespace Alten.Jama.Serialization
 {
     // See: https://dev.jamasoftware.com/cookbook/#date-format    
-    public class DateTimeOffsetConverter : JsonConverter<DateTimeOffset>
+    public sealed class DateTimeOffsetConverter : JsonConverter<DateTimeOffset>
     {
         // See: https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
         public static readonly string Format = "yyyy-MM-ddTHH:mm:ss.fffzz00";        

@@ -1,6 +1,6 @@
-﻿namespace Alten.Jama.Models
+namespace Alten.Jama.Models
 {
-    public class ItemTypeWidget
+    public sealed class ItemTypeWidget
     {
         public static readonly ItemTypeWidget Activities = new ItemTypeWidget("ACTIVITIES");
         public static readonly ItemTypeWidget Attachments = new ItemTypeWidget("ATTACHMENTS");

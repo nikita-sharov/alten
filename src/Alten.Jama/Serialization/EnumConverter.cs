@@ -1,11 +1,11 @@
-﻿using Humanizer;
+using Humanizer;
 using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace Alten.Jama.Serialization
 {
-    public class EnumConverter<T> : JsonConverter<T> where T : Enum
+    public sealed class EnumConverter<T> : JsonConverter<T> where T : Enum
     {
         private static readonly Type EnumType = typeof(T);
 
