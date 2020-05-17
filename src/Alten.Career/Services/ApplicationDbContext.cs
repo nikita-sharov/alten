@@ -1,4 +1,4 @@
-﻿using Alten.Career.Models;
+using Alten.Career.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Alten.Career.Services
@@ -12,10 +12,5 @@ namespace Alten.Career.Services
         public DbSet<JobApplication> JobApplications { get; set; }
 
         public DbSet<JobApplicationAttachment> JobApplicationAttachments { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            ////modelBuilder.Entity<JobApplicationViewModel>().HasKey(a => new { a.JobId, a.Id });
-        }
     }
 }

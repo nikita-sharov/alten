@@ -1,16 +1,12 @@
 using Alten.Jama.Models;
 using RestSharp;
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
 {
     public sealed class RestSharpUserService : IUserService
     {
-        private static readonly ValidationAttribute EmailAddress = new EmailAddressAttribute();
-
         private readonly IRestClient _client;
 
         public RestSharpUserService(IRestClient client) => _client = client;
@@ -79,12 +75,6 @@ namespace Alten.Jama.Services
 
         public Task<MetaResponse> CreateAsync(UserRequest body)
         {
-            Debug.Assert(!string.IsNullOrWhiteSpace(body.Username));
-            Debug.Assert(body.Password.Length >= JamaOptions.MinPasswordLength);
-            Debug.Assert(!string.IsNullOrWhiteSpace(body.FirstName));
-            Debug.Assert(!string.IsNullOrWhiteSpace(body.LastName));
-            Debug.Assert(EmailAddress.IsValid(body.Email));
-
             IRestRequest request = RestRequestFactory.Create("/users");
             request.AddJsonBody(body);
             return _client.PostAsync<MetaResponse>(request);
@@ -96,32 +86,6 @@ namespace Alten.Jama.Services
 
         public Task<MetaResponse> UpdateAsync(int userId, UserRequest body)
         {
-            if (body.Username != null)
-            {
-                Debug.Assert(!body.Username.IsEmptyOrWhiteSpace());
-            }
-
-            if (body.Password != null)
-            {
-                // Blank (whitespace-only) passwords are allowed.
-                Debug.Assert(body.Password.Length >= JamaOptions.MinPasswordLength);
-            }
-
-            if (body.FirstName != null)
-            {
-                Debug.Assert(!body.FirstName.IsEmptyOrWhiteSpace());
-            }
-
-            if (body.LastName != null)
-            {
-                Debug.Assert(!body.LastName.IsEmptyOrWhiteSpace());
-            }
-
-            if (body.Email != null)
-            {
-                Debug.Assert(EmailAddress.IsValid(body.Email));
-            }
-
             IRestRequest request = RestRequestFactory.Create($"/users/{userId}");
             request.AddJsonBody(body);
             return  _client.PutAsync<MetaResponse>(request);

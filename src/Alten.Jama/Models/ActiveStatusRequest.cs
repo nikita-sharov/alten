@@ -1,4 +1,0 @@
-namespace Alten.Jama.Models
-{
-
-}

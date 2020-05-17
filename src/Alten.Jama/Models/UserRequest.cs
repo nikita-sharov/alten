@@ -3,24 +3,31 @@ using System.ComponentModel.DataAnnotations;
 namespace Alten.Jama.Models
 {
     // See: https://rest.jamasoftware.com/#datatype_RequestUser
-    public class UserRequest
+    public abstract class UserRequest
     {
+        private const string NotEmptyOrWhiteSpace = @"^\S+$";
+
+        /// <summary>
+        /// The username must be unique so using an email address is recommended.
+        /// </summary>
         [StringLength(200)]
-        [RegularExpression(Pattern.Username)]
-        public string Username { get; set; }
+        [RegularExpression(NotEmptyOrWhiteSpace)]
+        public virtual string Username { get; set; }
 
         [StringLength(200, MinimumLength = 6)]
-        public string Password { get; set; }
+        public virtual string Password { get; set; }
 
         [StringLength(200)]
-        public string FirstName { get; set; }
+        [RegularExpression(NotEmptyOrWhiteSpace)]
+        public virtual string FirstName { get; set; }
 
         [StringLength(200)]
-        public string LastName { get; set; }
+        [RegularExpression(NotEmptyOrWhiteSpace)]
+        public virtual string LastName { get; set; }
 
         [StringLength(132)]
         [EmailAddress]
-        public string Email { get; set; }
+        public virtual string Email { get; set; }
 
         [StringLength(64)]
         public string Phone { get; set; }

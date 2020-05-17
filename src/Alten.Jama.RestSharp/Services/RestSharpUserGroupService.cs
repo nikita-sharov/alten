@@ -29,7 +29,8 @@ namespace Alten.Jama.Services
             return _client.GetAsync<DataResponse<UserGroup>>(request);
         }
 
-        public Task<DataListResponse<UserGroup>> GetListAsync(int? projectId = null, int startAt = 0, int maxResults = 50)
+        public Task<DataListResponse<UserGroup>> GetListAsync(
+            int? projectId = null, int startAt = 0, int maxResults = 50)
         {
             IRestRequest request = RestRequestFactory.Create("/usergroups", startAt, maxResults);
             
