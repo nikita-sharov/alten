@@ -3,7 +3,7 @@
   <Class Name="Alten.Career.Models.Job" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAIAAAAEAABAIIAAAAAAAAAAAAABAIgAAARAA=</HashCode>
+      <HashCode>AAACAAAAIAAAAEAABAIIAAAAgAABAAAAABAIgAAARAA=</HashCode>
       <FileName>Models\Job.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -18,7 +18,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Alten.Career.Models.JobApplicationAttachment">
-    <Position X="1.75" Y="7" Width="3" />
+    <Position X="6.25" Y="4.25" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAACAAAAAAAAAAAAAAAAAAAAAAQAgBAAAA=</HashCode>
       <FileName>Models\JobApplicationAttachment.cs</FileName>
