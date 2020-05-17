@@ -24,8 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Career\Models\" />
-    <Folder Include="Career\Services\" />
+    <Folder Include="Jama\Models\" />
   </ItemGroup>
 
   <ItemGroup>

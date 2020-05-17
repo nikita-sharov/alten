@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Alten.Jama.Models.ItemTypeRequest">
+    <Position X="0.5" Y="1" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAACgIAAAAQAAAQAAAQAAABAAAAAAACAACAA=</HashCode>
+      <FileName>Models\ItemTypeRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Image" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Widgets" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alten.Jama.Models.ItemTypeWidget">
+    <Position X="1.5" Y="5.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAEAAEEAAAAgAAQAAAEAEEEQIAACIKIAAQA=</HashCode>
+      <FileName>Models\ItemTypeWidget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alten.Jama.Models.ItemTypeCategories">
+    <Position X="6.25" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAAJAAAAAAgIAAAAAQAEAAAAABCCIAAAAA=</HashCode>
+      <FileName>Models\ItemTypeCategories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alten.Jama.Models.ItemType">
+    <Position X="5" Y="6" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\ItemType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alten.Jama.Models.ItemTypeFieldRequest">
+    <Position X="5.25" Y="8.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAmAEAAAAAAABAAAQAAAAAAAAAIAAIAAAAAAA=</HashCode>
+      <FileName>Models\ItemTypeFieldRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Alten.Jama.Models.ItemTypeImage">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACSgAEmgQiCBAAQAVAQAQAAAEEFBDEAIiAkAgpAA=</HashCode>
+      <FileName>Models\ItemTypeImage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

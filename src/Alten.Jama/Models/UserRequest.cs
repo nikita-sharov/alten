@@ -38,6 +38,6 @@ namespace Alten.Jama.Models
         [StringLength(64)]
         public string Location { get; set; }
 
-        public LicenseType LicenseType { get; set; }
+        public LicenseType LicenseType { get; set; } = LicenseType.Named;
     }
 }

@@ -3,16 +3,16 @@ namespace Alten.Jama.Models
     // See: https://help.jamasoftware.com/ah/en/administration/organization-administrator/manage-users/license-types.html
     public enum LicenseType
     {
-        Named = 0,
+        ExpiringTrial = 0,
         Floating,
-        Stakeholder,
         FloatingCollaborator,
-        ReservedCollaborator,
-        FloatingREViewer,
-        ReservedReviewer,
+        FloatingReviewer,
+        Inactive,
+        Named,
         NamedReviewer,
-        TestRunner,
-        ExpiringTrial,
-        Inactive
+        ReservedCollaborator,
+        ReservedReviewer,
+        Stakeholder,
+        TestRunner
     }
 }

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Alten.Jama.Models.UserRequest">
+    <Position X="2.25" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEABACIAAEAAAQIAAAAAAAAAAAACAAAAIAAAAAg=</HashCode>
+      <FileName>Models\UserRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LicenseType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Alten.Jama.Models.CreateUserRequest" Collapsed="true">
+    <Position X="1.25" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAg=</HashCode>
+      <FileName>Models\CreateUserRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alten.Jama.Models.UpdateUserRequest" Collapsed="true">
+    <Position X="4.25" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAg=</HashCode>
+      <FileName>Models\UpdateUserRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Alten.Jama.Services.IUserService">
+    <Position X="0.5" Y="7.5" Width="9.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAEAIAAAAAAAAAAACAIgAAAAAIIAAAAA=</HashCode>
+      <FileName>Services\IUserService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Alten.Jama.Models.LicenseType">
+    <Position X="6.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgAAAABAAEgAAAAAAAAAABAECASAAAAAA=</HashCode>
+      <FileName>Models\LicenseType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
