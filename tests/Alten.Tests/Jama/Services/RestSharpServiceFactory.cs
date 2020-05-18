@@ -1,6 +1,7 @@
 using Alten.Jama.Serialization;
 using RestSharp;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 
 namespace Alten.Jama.Services
@@ -9,6 +10,8 @@ namespace Alten.Jama.Services
     {
         private static readonly IRestClient Client;
 
+        [SuppressMessage(
+            "Performance", "CA1810:Initialize reference type static fields inline", Justification = "Readability")]
         static RestSharpServiceFactory()
         {
             JamaOptions jamaOptions = JamaOptionsFactory.Create();

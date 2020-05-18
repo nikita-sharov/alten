@@ -1,7 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 using System.Reflection;
 
@@ -34,6 +35,7 @@ namespace Alten.Career.Helpers
             Assert.AreEqual(expectedName, actualName);
         }
 
+        [SuppressMessage("Performance", "CA1812:Avoid uninstantiated internal classes", Justification = "Reflection")]
         private sealed class Dummy
         {
             public int Value { get; set; }

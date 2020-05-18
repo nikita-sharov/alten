@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Alten.Jama
 {
@@ -11,7 +11,7 @@ namespace Alten.Jama
             JamaOptions options = JamaOptionsFactory.Create();
 
             Assert.IsNotNull(options);
-            Assert.IsFalse(string.IsNullOrWhiteSpace(options.BaseUrl));
+            Assert.IsTrue(options.BaseUrl.IsAbsoluteUri);
             Assert.IsFalse(string.IsNullOrWhiteSpace(options.Username));
             Assert.IsFalse(string.IsNullOrWhiteSpace(options.Password));
         }

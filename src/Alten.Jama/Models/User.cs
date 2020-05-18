@@ -1,3 +1,5 @@
+using System;
+
 namespace Alten.Jama.Models
 {
     // See: https://rest.jamasoftware.com/#datatype_User
@@ -22,7 +24,7 @@ namespace Alten.Jama.Models
         public LicenseType LicenseType { get; set; }
 
         // Always null (also when set via web application)
-        public string AvatarUrl { get; set; }
+        public Uri AvatarUrl { get; set; }
 
         public bool Active { get; set; }
     }

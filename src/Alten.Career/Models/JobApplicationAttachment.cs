@@ -1,4 +1,6 @@
-﻿namespace Alten.Career.Models
+using System.Diagnostics.CodeAnalysis;
+
+namespace Alten.Career.Models
 {
     public sealed class JobApplicationAttachment
     {
@@ -6,6 +8,8 @@
 
         public JobApplication JobApplication { get; set; }
 
+
+        [SuppressMessage("Performance", "CA1819:Properties should not return arrays", Justification = "Reviewed")]
         public byte[] Content { get; set; }
 
         public string ContentType { get; set; }

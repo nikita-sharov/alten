@@ -2,6 +2,7 @@ using Alten.Career.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Mime;
 using System.Text;
 
@@ -18,10 +19,10 @@ namespace Alten.Career.ViewModels
             Address = "Mariatroster Straße 172/4",
             PostalCode = "8044",
             Location = "Graz",
-            DateOfBirth = DateTime.Parse("14.09.1982"),
+            DateOfBirth = DateTime.Parse("14.09.1982", FormatProvider),
             Email = "nikita.sharov@235u.net",
             PrimaryPhone = "+43 664 182 22 83",
-            StartingDate = DateTime.Parse("01.06.2020"),
+            StartingDate = DateTime.Parse("01.06.2020", FormatProvider),
             YearlySalaryInEuros = JobViewModelPool.YourJob.MonthlySalaryInEuros * 14,
             RegisteredAsUnemployed = false,
             Attachments = new List<JobApplicationAttachment>
@@ -35,6 +36,8 @@ namespace Alten.Career.ViewModels
             },
             PrivacyNoteAccepted = true
         };
+
+        private static readonly IFormatProvider FormatProvider = new CultureInfo("de");
 
         static JobApplicationViewModelPool()
         {

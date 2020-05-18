@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Alten.Career.ViewModels
 {
@@ -13,7 +14,7 @@ namespace Alten.Career.ViewModels
                 MonthlySalaryInEuros = 3_400
             };
 
-            Assert.IsTrue(job.SalaryText.Contains("3.400,-- € gross per month"));
+            Assert.IsTrue(job.SalaryText.Contains("3.400,-- € gross per month", StringComparison.InvariantCulture));
         }
     }
 }

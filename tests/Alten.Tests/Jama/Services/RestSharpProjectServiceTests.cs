@@ -1,5 +1,6 @@
 using Alten.Jama.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -49,7 +50,8 @@ namespace Alten.Jama.Services
             {
                 DataListResponse<Project> dataListResponse = await _service.GetListAsync(
                     startAt, JamaOptions.MaxResultsMax);
-                project = dataListResponse.Data.SingleOrDefault(p => p.ProjectKey == key);
+                project = dataListResponse.Data
+                    .SingleOrDefault(p => p.ProjectKey.Equals(key, StringComparison.InvariantCultureIgnoreCase));
                 if (project != null)
                 {
                     break;

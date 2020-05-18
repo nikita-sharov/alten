@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -7,7 +7,8 @@ namespace Alten.Jama.Serialization
 {
     public sealed class DateTimeConverter : JsonConverter<DateTime>
     {
-        private static readonly string Format = "yyyy-MM-dd";
+        private const string Format = "yyyy-MM-dd";
+
         private static readonly IFormatProvider FormatProvider = CultureInfo.InvariantCulture.DateTimeFormat;
 
         public static string ToShortDateString(DateTime value) => value.ToString(Format, FormatProvider);

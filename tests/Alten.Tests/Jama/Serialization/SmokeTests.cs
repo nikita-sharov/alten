@@ -1,5 +1,6 @@
 using Alten.Jama.Models;
 using Alten.Jama.Serialization;
+using Humanizer;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text.Json;
 

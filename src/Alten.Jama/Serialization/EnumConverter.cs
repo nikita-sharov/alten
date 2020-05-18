@@ -1,5 +1,6 @@
 using Humanizer;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -9,6 +10,7 @@ namespace Alten.Jama.Serialization
     {
         private static readonly Type EnumType = typeof(T);
 
+        [SuppressMessage("Globalization", "CA1308:Normalize strings to uppercase", Justification = "Reviewed")]
         public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             string upperSnakeCase = reader.GetString();

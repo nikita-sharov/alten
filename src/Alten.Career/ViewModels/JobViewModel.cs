@@ -77,7 +77,7 @@ namespace Alten.Career.ViewModels
             if (tasks.Length > Job.TasksMaxLength)
             {
                 yield return new ValidationResult(
-                    string.Format(FormatString, nameof(Tasks), Job.TasksMaxLength),
+                    string.Format(CultureInfo.InvariantCulture, FormatString, nameof(Tasks), Job.TasksMaxLength),
                     new[] { nameof(Tasks) });
             }
 
@@ -85,7 +85,7 @@ namespace Alten.Career.ViewModels
             if (profile.Length > Job.ProfileMaxLength)
             {
                 yield return new ValidationResult(
-                    string.Format(FormatString, nameof(Profile), Job.ProfileMaxLength),
+                    string.Format(CultureInfo.InvariantCulture, FormatString, nameof(Profile), Job.ProfileMaxLength),
                     new[] { nameof(Profile) });
             }
         }
