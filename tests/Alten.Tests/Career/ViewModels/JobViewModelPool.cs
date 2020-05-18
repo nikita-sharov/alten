@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Alten.Career.ViewModels
 {
-    public static class JobViewModelPool
+    internal static class JobViewModelPool
     {
         public static readonly JobViewModel YourJob = new JobViewModel
         {

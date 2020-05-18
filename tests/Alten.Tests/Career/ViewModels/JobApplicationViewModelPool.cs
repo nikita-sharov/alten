@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Alten.Career.ViewModels
 {
-    public static class JobApplicationViewModelPool
+    internal static class JobApplicationViewModelPool
     {
         public static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
         {

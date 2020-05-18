@@ -7,7 +7,7 @@ namespace Alten
 {
     // See: https://github.com/microsoft/testfx-docs/blob/master/RFCs/002-Framework-Extensibility-Custom-Assertions.md
     [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "Predefined")]
-    public static class AssertExtensions
+    internal static class AssertExtensions
     {
         public static void IsValid(this Assert assert, object instance)
         {

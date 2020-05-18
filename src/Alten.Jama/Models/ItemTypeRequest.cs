@@ -47,7 +47,7 @@ namespace Alten.Jama.Models
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
-            if (!RequestableCategories.Contains(Category))
+            if (Category.HasValue && !RequestableCategories.Contains(Category.Value))
             {
                 yield return new ValidationResult($"{Category} is not requestable.", new[] { nameof(Category) });
             }
