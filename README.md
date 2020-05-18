@@ -1,5 +1,7 @@
 # ALTEN
 
+[![GitHub top language](https://img.shields.io/github/languages/top/nikita-sharov/alten?style=for-the-badge)](https://github.com/search?q=repo%3Anikita-sharov%2Falten+language%3AC%23&type=Code&ref=advsearch&l=C%23)
+
 This **Git** repository showcases a sample based around creation of job offerings and job applications for the ALTEN Group.
 
 ## MVVM
