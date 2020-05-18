@@ -13,7 +13,7 @@ namespace Alten
         {
             var context = new ValidationContext(instance);
             var results = new List<ValidationResult>();
-            bool isValid = Validator.TryValidateObject(instance, context, results, validateAllProperties: true);
+            var isValid = Validator.TryValidateObject(instance, context, results, validateAllProperties: true);            
             Assert.IsTrue(isValid);
         }
     }

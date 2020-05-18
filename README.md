@@ -13,7 +13,7 @@ This **Git** repository showcases a sample based around creation of [job offerin
 `JobViewModelPool.cs`
 
 ```csharp
-public static class JobViewModelPool
+internal static class JobViewModelPool
 {
     public static readonly JobViewModel YourJob = new JobViewModel
     {
@@ -64,7 +64,7 @@ public static class JobViewModelPool
 ```csharp
 // See: https://github.com/microsoft/testfx-docs/blob/master/RFCs/002-Framework-Extensibility-Custom-Assertions.md
 [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "Predefined")]
-public static class AssertExtensions
+internal static class AssertExtensions
 {
     public static void IsValid(this Assert assert, object instance)
     {
@@ -83,7 +83,7 @@ public static class AssertExtensions
 `JobApplicationViewModelPool.cs`
 
 ```csharp
-public static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
+internal static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
 {
     Salutation = Salutation.Mr,
     FirstName = "Nikita",
