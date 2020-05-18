@@ -6,11 +6,7 @@ This **Git** repository showcases a sample based around creation of [job offerin
 
 ## MVVM
 
-`Job.cd`
-
 ![Job](media/job.png)
-
-`JobViewModelPool.cs`
 
 ```csharp
 internal static class JobViewModelPool
@@ -55,11 +51,7 @@ internal static class JobViewModelPool
 }
 ```
 
-`JobApplicationViewModel.cd`
-
-![JobApplication](media/job-view-model.png)
-
-`AssertExtensions.cs`
+![JobViewModel](media/job-view-model.png)
 
 ```csharp
 // See: https://github.com/microsoft/testfx-docs/blob/master/RFCs/002-Framework-Extensibility-Custom-Assertions.md
@@ -76,11 +68,7 @@ internal static class AssertExtensions
 }
 ```
 
-`JobApplication.cd`
-
 ![JobApplication](media/job-application.png)
-
-`JobApplicationViewModelPool.cs`
 
 ```csharp
 internal static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
