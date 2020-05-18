@@ -6,16 +6,15 @@ namespace Alten.Career.Models
     [Flags]
     public enum BusinessBranches
     {
-        [Description("Other Branches")]
+        // TODO: Compare to "Weitere Branchen" in German version.
+        [Description("Sector irrelevant")]
         None = 0,
 
-        [Description("Automotive Engineering")]
         AutomotiveEngineering = 1,
 
-        [Description("Electric & Electronic Engineering")]
-        ElectricAndElectronicEngineering = 2,
+        [Description("Electric[al] <del>&</del>[and] Electronic Engineering")]
+        ElectricalAndElectronicEngineering = 2,
 
-        [Description("Semiconductor Technology")]
         SemiconductorTechnology = 4,
     }
 }

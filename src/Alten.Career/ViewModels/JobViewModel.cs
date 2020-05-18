@@ -35,8 +35,10 @@ namespace Alten.Career.ViewModels
 
         public EntryLevels EntryLevels { get; set; }
 
+        [DataType(DataType.MultilineText)]
         public ICollection<string> Tasks { get; set; }
 
+        [DataType(DataType.MultilineText)]
         public ICollection<string> Profile { get; set; }
 
         /// <summary>
@@ -71,7 +73,7 @@ namespace Alten.Career.ViewModels
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
-            const string FormatString = "{0} must not be longer than {1} characters.";
+            const string FormatString = "{0} must not exceed {1} characters.";
 
             var tasks = string.Join(Environment.NewLine, Tasks);
             if (tasks.Length > Job.TasksMaxLength)

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 
 namespace Alten.Career.Models
@@ -14,7 +14,6 @@ namespace Alten.Career.Models
         [Description("Requirements / Systems Engineering")]
         RequirementsAndOrSystemsEngineering = 2,
 
-        [Description("Software evelopment")]
         SoftwareDevelopment = 4
     }
 }
