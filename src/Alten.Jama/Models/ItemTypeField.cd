@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Alten.Jama.Models.ItemTypeField">
+    <Position X="4.75" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ItemTypeField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alten.Jama.Models.ItemTypeFieldRequest">
+    <Position X="4.25" Y="2.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAmAEAAAAAAABAAAQAAAAAAAAAIAAIAAAAAAA=</HashCode>
+      <FileName>Models\ItemTypeFieldRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FieldType" />
+      <Property Name="TextType" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Alten.Jama.Models.FieldType">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAJQAAAAACQAAAKIAAAAAEAgAJAChACBABARA=</HashCode>
+      <FileName>Models\FieldType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Alten.Jama.Models.TextType">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Models\TextType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

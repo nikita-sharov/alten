@@ -24,15 +24,8 @@
       <FileName>Models\UpdateUserRequest.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="Alten.Jama.Services.IUserService">
-    <Position X="0.5" Y="7.5" Width="9.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAgAAAAAAAEAIAAAAAAAAAAACAIgAAAAAIIAAAAA=</HashCode>
-      <FileName>Services\IUserService.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Enum Name="Alten.Jama.Models.LicenseType">
-    <Position X="6.5" Y="2" Width="1.75" />
+    <Position X="6.25" Y="2" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAgAAAABAAEgAAAAAAAAAABAECASAAAAAA=</HashCode>
       <FileName>Models\LicenseType.cs</FileName>

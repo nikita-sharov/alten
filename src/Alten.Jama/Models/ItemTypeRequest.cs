@@ -7,11 +7,10 @@ namespace Alten.Jama.Models
 {
     public class ItemTypeRequest : IValidatableObject
     {
-        private static readonly IEnumerable<string> RequestableCategories = new HashSet<string>
+        private static readonly IEnumerable<ItemTypeCategory> RequestableCategories = new HashSet<ItemTypeCategory>
         {
-            ItemTypeCategories.Default,
-            ItemTypeCategories.Defect,
-            ItemTypeCategories.TestCase
+            ItemTypeCategory.Defect,
+            ItemTypeCategory.TestCase
         };
 
         // TODO: Specify synchronizable (and requestable) widgets. Extract?
@@ -42,7 +41,7 @@ namespace Alten.Jama.Models
         public ItemTypeImage Image { get; set; }
 
         [Display(Name = "Use as")]
-        public string Category { get; set; } = ItemTypeCategories.Default;
+        public ItemTypeCategory? Category { get; set; }
 
         public List<ItemTypeWidget> Widgets { get; set; }
 

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Alten.Career.Services
 {
-    public class ApplicationDbContext : DbContext
+    public sealed class ApplicationDbContext : DbContext
     {
         public DbSet<Employee> Employees { get; set; }
 

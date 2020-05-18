@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Alten.Career.ViewModels
 {
-    public class JobApplicationViewModel
+    public sealed class JobApplicationViewModel
     {
         public JobViewModel Job { get; set; }
 

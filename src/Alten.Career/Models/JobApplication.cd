@@ -16,16 +16,16 @@
     <ShowAsAssociation>
       <Property Name="Job" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Attachments" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Alten.Career.Models.JobApplicationAttachment">
-    <Position X="6.25" Y="4.25" Width="3" />
+    <Position X="3.5" Y="7" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAACAAAAAAAAAAAAAAAAAAAAAAQAgBAAAA=</HashCode>
       <FileName>Models\JobApplicationAttachment.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="JobApplication" />
-    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

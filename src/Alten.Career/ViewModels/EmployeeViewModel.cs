@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Alten.Career.ViewModels
 {
-    public class EmployeeViewModel
+    public sealed class EmployeeViewModel
     {
         [Required]
         [StringLength(64)]

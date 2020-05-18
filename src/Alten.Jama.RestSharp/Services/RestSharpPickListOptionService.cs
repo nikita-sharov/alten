@@ -1,10 +1,9 @@
-﻿using Alten.Jama.Models;
+using Alten.Jama.Models;
 using RestSharp;
 using System.Threading.Tasks;
 
 namespace Alten.Jama.Services
 {
-    // See: https://rest.jamasoftware.com/#datatype_RequestPickListOption
     public sealed class RestSharpPickListOptionService : IPickListOptionService
     {
         private readonly IRestClient _client;

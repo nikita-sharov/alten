@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Alten.Career.ViewModels
 {
-    public class JobViewModel : IValidatableObject
+    public sealed class JobViewModel : IValidatableObject
     {
         private static readonly IFormatProvider SalaryFormatInfo = new NumberFormatInfo
         {
