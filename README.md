@@ -2,7 +2,7 @@
 
 [![GitHub top language](https://img.shields.io/github/languages/top/nikita-sharov/alten?style=for-the-badge)](https://github.com/search?q=repo%3Anikita-sharov%2Falten+language%3AC%23&type=Code&ref=advsearch&l=C%23)
 
-This **Git** repository showcases a sample based around creation of job offerings and job applications for the ALTEN Group.
+This **Git** repository showcases a sample based around creation of [job offerings](https://www.alten.at/en/career/jobs.html) and [job applications](https://www.alten.at/en/speculative-application.html) for  [ALTEN Austria](https://www.alten.at/en).
 
 ## MVVM
 
@@ -59,6 +59,8 @@ public static class JobViewModelPool
 
 ![JobApplication](media/job-view-model.png)
 
+`AssertExtensions.cs`
+
 ```csharp
 // See: https://github.com/microsoft/testfx-docs/blob/master/RFCs/002-Framework-Extensibility-Custom-Assertions.md
 [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "Predefined")]
@@ -81,101 +83,30 @@ public static class AssertExtensions
 `JobApplicationViewModelPool.cs`
 
 ```csharp
-public static class JobApplicationViewModelPool
+public static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
 {
-    public static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
+    Salutation = Salutation.Mr,
+    FirstName = "Nikita",
+    LastName = "Sharov",
+    Citizenship = "Russian Federation",
+    Address = "Mariatroster Straße 172/4",
+    PostalCode = "8044",
+    Location = "Graz",
+    DateOfBirth = DateTime.Parse("14.09.1982", FormatProvider),
+    Email = "nikita.sharov@235u.net",
+    PrimaryPhone = "+43 664 182 22 83",
+    StartingDate = DateTime.Parse("01.06.2020", FormatProvider),
+    YearlySalaryInEuros = JobViewModelPool.YourJob.MonthlySalaryInEuros * 14,
+    RegisteredAsUnemployed = false,
+    Attachments = new List<JobApplicationAttachment>
     {
-        Salutation = Salutation.Mr,
-        FirstName = "Nikita",
-        LastName = "Sharov",
-        Citizenship = "Russian Federation",
-        Address = "Mariatroster Straße 172/4",
-        PostalCode = "8044",
-        Location = "Graz",
-        DateOfBirth = DateTime.Parse("14.09.1982", FormatProvider),
-        Email = "nikita.sharov@235u.net",
-        PrimaryPhone = "+43 664 182 22 83",
-        StartingDate = DateTime.Parse("01.06.2020", FormatProvider),
-        YearlySalaryInEuros = JobViewModelPool.YourJob.MonthlySalaryInEuros * 14,
-        RegisteredAsUnemployed = false,
-        Attachments = new List<JobApplicationAttachment>
+        new JobApplicationAttachment
         {
-            new JobApplicationAttachment
-            {
-                Content = Encoding.UTF8.GetBytes("..."),
-                ContentType = MediaTypeNames.Text.Plain,
-                FileName = "README.md"
-            }
-        },
-        PrivacyNoteAccepted = true
-    };
-
-    private static readonly IFormatProvider FormatProvider = new CultureInfo("de");
-
-    static JobApplicationViewModelPool()
-    {
-        Assert.That.IsValid(MyJobApplication);
-    }
-}
-```
-
-## JAMA
-
-```csharp
-[TestClass]
-public sealed class RestSharpProjectServiceTests
-{
-    private readonly IProjectService _service = RestSharpServiceFactory.Create<RestSharpProjectService>();
-
-    [TestMethod]
-    public async Task EnsureCreatedAsync()
-    {
-        Project project = await GetOrCreateAsync();
-        Assert.IsNotNull(project);
-    }
-
-    private async Task<Project> GetOrCreateAsync()
-    {
-        Project project = await FindProject(key: "HR");
-        if (project == null)
-        {
-            var request = new ProjectRequest
-            {
-                ProjectKey = "HR",
-                Fields = new Dictionary<string, object>
-                {
-                    [EntityField.Name] = "Recruiting"
-                }
-            };
-
-            MetaResponse createdResponse = await _service.CreateAsync(request);
-            DataResponse<Project> dataResponse = await _service.GetAsync(createdResponse.Meta.Id.Value);
-            project = dataResponse.Data;
+            Content = Encoding.UTF8.GetBytes("..."),
+            ContentType = MediaTypeNames.Text.Plain,
+            FileName = "README.md"
         }
-
-        return project;
-    }
-
-    private async Task<Project> FindProject(string key)
-    {
-        Project project = null;
-        int startAt = 0;
-        PageInfo pageInfo = null;
-        do
-        {
-            DataListResponse<Project> dataListResponse = await _service.GetListAsync(
-                startAt, JamaOptions.MaxResultsMax);
-            project = dataListResponse.Data.SingleOrDefault(p => p.ProjectKey == key);
-            if (project != null)
-            {
-                break;
-            }
-
-            pageInfo = dataListResponse.Meta.PageInfo;
-            startAt = pageInfo.StartIndex + pageInfo.ResultCount;
-        }
-        while (startAt < pageInfo.TotalResults);
-        return project;
-    }
-}
+    },
+    PrivacyNoteAccepted = true
+};
 ```
