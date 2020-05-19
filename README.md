@@ -89,4 +89,18 @@ internal static class JobApplicationPool
     }
 }
 ```
+
 ![JobApplication](docs/media/job-application.png)
+
+```csharp
+[TestClass]
+public class JobApplicationViewModelCreate
+{
+    [TestMethod]
+    public void ImpliesPrivacyNoteWasAccepted()
+    {
+        var viewModel = JobApplicationViewModel.Create(JobApplicationPool.MyJobApplication);
+        Assert.IsTrue(viewModel.PrivacyNoteAccepted);
+    }
+}
+```
