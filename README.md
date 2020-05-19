@@ -6,8 +6,6 @@ This **Git** repository showcases a sample based around creation of [job offerin
 
 ## Career
 
-![Job](docs/media/job-view-model.png)
-
 ```csharp
 internal static class JobViewModelPool
 {
@@ -51,7 +49,7 @@ internal static class JobViewModelPool
 }
 ```
 
-![JobApplication](docs/media/job-application.png)
+![Job](docs/media/job-view-model.png)
 
 ```csharp
 internal static class JobApplicationPool
@@ -91,3 +89,4 @@ internal static class JobApplicationPool
     }
 }
 ```
+![JobApplication](docs/media/job-application.png)
