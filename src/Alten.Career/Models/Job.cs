@@ -31,7 +31,6 @@ namespace Alten.Career.Models
         [MaxLength(ProfileMaxLength)]
         public string Profile { get; set; }
 
-        [Range(1, int.MaxValue)]
         public int MonthlySalaryInEuros { get; set; }
 
         public int ContactPersonId { get; set; }

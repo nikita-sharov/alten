@@ -4,9 +4,9 @@
 
 This **Git** repository showcases a sample based around creation of [job offerings](https://www.alten.at/en/career/jobs.html) and [job applications](https://www.alten.at/en/speculative-application.html) for  [ALTEN Austria](https://www.alten.at/en).
 
-## MVVM
+## Career
 
-![Job](media/job.png)
+![Job](docs/media/job.png)
 
 ```csharp
 internal static class JobViewModelPool
@@ -51,7 +51,7 @@ internal static class JobViewModelPool
 }
 ```
 
-![JobViewModel](media/job-view-model.png)
+![JobViewModel](docs/media/job-view-model.png)
 
 ```csharp
 // See: https://github.com/microsoft/testfx-docs/blob/master/RFCs/002-Framework-Extensibility-Custom-Assertions.md
@@ -68,33 +68,43 @@ internal static class AssertExtensions
 }
 ```
 
-![JobApplication](media/job-application.png)
+![JobApplication](docs/media/job-application.png)
 
 ```csharp
-internal static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
+internal static class JobApplicationViewModelPool
 {
-    Salutation = Salutation.Mr,
-    FirstName = "Nikita",
-    LastName = "Sharov",
-    Citizenship = "Russian Federation",
-    Address = "Mariatroster Straße 172/4",
-    PostalCode = "8044",
-    Location = "Graz",
-    DateOfBirth = DateTime.Parse("14.09.1982", FormatProvider),
-    Email = "nikita.sharov@235u.net",
-    PrimaryPhone = "+43 664 182 22 83",
-    StartingDate = DateTime.Parse("01.06.2020", FormatProvider),
-    YearlySalaryInEuros = JobViewModelPool.YourJob.MonthlySalaryInEuros * 14,
-    RegisteredAsUnemployed = false,
-    Attachments = new List<JobApplicationAttachment>
+    public static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
     {
-        new JobApplicationAttachment
+        Salutation = Salutation.Mr,
+        FirstName = "Nikita",
+        LastName = "Sharov",
+        Citizenship = "Russian Federation",
+        Address = "Mariatroster Straße 172/4",
+        PostalCode = "8044",
+        Location = "Graz",
+        DateOfBirth = DateTime.Parse("14.09.1982", FormatProvider),
+        Email = "nikita.sharov@235u.net",
+        PrimaryPhone = "+43 664 182 22 83",
+        StartingDate = DateTime.Parse("01.06.2020", FormatProvider),
+        YearlySalaryInEuros = JobViewModelPool.YourJob.MonthlySalaryInEuros * 14,
+        RegisteredAsUnemployed = false,
+        Attachments = new List<JobApplicationAttachment>
         {
-            Content = Encoding.UTF8.GetBytes("..."),
-            ContentType = MediaTypeNames.Text.Plain,
-            FileName = "README.md"
-        }
-    },
-    PrivacyNoteAccepted = true
-};
+            new JobApplicationAttachment
+            {
+                Content = Encoding.UTF8.GetBytes("..."),
+                ContentType = MediaTypeNames.Text.Plain,
+                FileName = "README.md"
+            }
+        },
+        PrivacyNoteAccepted = true
+    };
+
+    private static readonly IFormatProvider FormatProvider = new CultureInfo("de");
+
+    static JobApplicationViewModelPool()
+    {
+        Assert.That.IsValid(MyJobApplication);
+    }
+}
 ```

@@ -23,7 +23,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Alten.Jama.Models.ItemType">
-    <Position X="4.25" Y="10.5" Width="3" />
+    <Position X="4.25" Y="10.25" Width="3" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>Models\ItemType.cs</FileName>

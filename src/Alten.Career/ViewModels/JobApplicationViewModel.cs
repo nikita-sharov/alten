@@ -83,7 +83,7 @@ namespace Alten.Career.ViewModels
         [Required]
         [Display(
             Name = "Upload application",
-            Description = "Please upload your application documents below[_](CVs, certificates, other documents), preferably in DOC, DOCX, PDF, PNG, JPEG or JPG. Make sure that each file is not larger than 4MB.",
+            Description = "Please upload your application documents below[_](CVs, certificates, other documents), preferably in DOC, DOCX, PDF, PNG, JPEG or JPG. Make sure that each file is not larger than 4[_]MB.",
             Prompt = "Choose file")]
         public ICollection<JobApplicationAttachment> Attachments { get; set; }
 

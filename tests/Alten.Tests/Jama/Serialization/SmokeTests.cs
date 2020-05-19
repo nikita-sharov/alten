@@ -2,15 +2,16 @@ using Alten.Jama.Models;
 using Alten.Jama.Serialization;
 using Humanizer;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Text.Json;
 
 namespace Alten.Jama.Tests.Serialization
 {
     [TestClass]
-    public class SmokeTests
+    public static class SmokeTests
     {
         [TestMethod]
-        public void SerializeItemTypeImage()
+        public static void SerializeItemTypeImage()
         {
             JsonSerializerOptions options = JsonSerializerOptionsFactory.Create();
             string json = JsonSerializer.Serialize(ItemTypeImage.Book2, options);
