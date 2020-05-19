@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Alten.Career.Models.Job" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAIAAAAEAABAIIAAAAgAABAAAAABAIgAAARAA=</HashCode>
+      <HashCode>AAACAAAAIBAAAEAABAIIAAAAgAABAAAAABAIgAAARAA=</HashCode>
       <FileName>Models\Job.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Alten.Career.Models.JobApplication">
-    <Position X="0.5" Y="1.75" Width="4.25" />
+    <Position X="0.5" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAASAEIAACAAgEFAIAIAAAAEAAAyAgACAAAAAICAAAg=</HashCode>
       <FileName>Models\JobApplication.cs</FileName>
@@ -16,9 +16,12 @@
     <ShowAsAssociation>
       <Property Name="Job" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Attachments" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Alten.Career.Models.JobApplicationAttachment">
-    <Position X="6.25" Y="4.25" Width="2.5" />
+    <Position X="4.25" Y="4.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAACAAAAAAAAAAAAAAAAAAAAAAQAgBAAAA=</HashCode>
       <FileName>Models\JobApplicationAttachment.cs</FileName>

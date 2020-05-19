@@ -102,7 +102,7 @@ namespace Alten.Career.ViewModels
                 DateOfBirth = source.DateOfBirth,
                 Email = source.Email,
                 FirstName = source.FirstName,
-                Job = JobViewModel.Create(source.Job),
+                Job = source.Job != null ? JobViewModel.Create(source.Job) : null,
                 LastName = source.LastName,
                 Location = source.Location,
                 PostalCode = source.PostalCode,

@@ -51,30 +51,14 @@ internal static class JobViewModelPool
 }
 ```
 
-![JobViewModel](docs/media/job-view-model.png)
-
-```csharp
-// See: https://github.com/microsoft/testfx-docs/blob/master/RFCs/002-Framework-Extensibility-Custom-Assertions.md
-[SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "Predefined")]
-internal static class AssertExtensions
-{
-    public static void IsValid(this Assert assert, object instance)
-    {
-        var context = new ValidationContext(instance);
-        var results = new List<ValidationResult>();
-        bool isValid = Validator.TryValidateObject(instance, context, results, validateAllProperties: true);
-        Assert.IsTrue(isValid);
-    }
-}
-```
-
 ![JobApplication](docs/media/job-application.png)
 
 ```csharp
-internal static class JobApplicationViewModelPool
+internal static class JobApplicationPool
 {
-    public static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
+    public static readonly JobApplication MyJobApplication = new JobApplication
     {
+        JobId = JobViewModelPool.YourJob.Id,
         Salutation = Salutation.Mr,
         FirstName = "Nikita",
         LastName = "Sharov",
@@ -96,13 +80,12 @@ internal static class JobApplicationViewModelPool
                 ContentType = MediaTypeNames.Text.Plain,
                 FileName = "README.md"
             }
-        },
-        PrivacyNoteAccepted = true
+        }
     };
 
     private static readonly IFormatProvider FormatProvider = new CultureInfo("de");
 
-    static JobApplicationViewModelPool()
+    static JobApplicationPool()
     {
         Assert.That.IsValid(MyJobApplication);
     }
