@@ -28,9 +28,9 @@ public interface IPickListService
 
     Task<DataResponse<PickList>> GetAsync(int pickListId);
 
-    Task<DataListResponse<PickList>> GetListAsync(int startAt, int maxResults);        
+    Task<DataListResponse<PickList>> GetListAsync(int startAt, int maxResults);
 
-    Task<DataListResponse<PickListOption>> GetOptionListAsync(int pickListId, int startAt, int maxResults);                
+    Task<DataListResponse<PickListOption>> GetOptionListAsync(int pickListId, int startAt, int maxResults);
 
     Task DeleteAsync(int pickListId);
 }
