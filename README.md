@@ -6,7 +6,7 @@ This **Git** repository showcases a sample based around creation of [job offerin
 
 ## Career
 
-![Job](docs/media/job.png)
+![Job](docs/media/job-view-model.png)
 
 ```csharp
 internal static class JobViewModelPool

@@ -3,7 +3,7 @@
   <Class Name="Alten.Career.Models.Job">
     <Position X="1.5" Y="2.75" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAIAAAAEAABAIIAAAAgAABAAAAABAIgAAARAA=</HashCode>
+      <HashCode>AAACAAAAIBAAAEAABAIIAAAAgAABAAAAABAIgAAARAA=</HashCode>
       <FileName>Models\Job.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -12,9 +12,12 @@
       <Property Name="EntryLevels" />
       <Property Name="ContactPerson" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Applications" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Alten.Career.Models.JobApplication" Collapsed="true">
-    <Position X="3.75" Y="6.5" Width="1.5" />
+    <Position X="3.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAASAEIAACAAgEFAIAIAAAAEAAAyAgACAAAAAICAAAg=</HashCode>
       <FileName>Models\JobApplication.cs</FileName>
@@ -24,7 +27,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Alten.Career.Models.Employee">
-    <Position X="0.75" Y="6.25" Width="2.25" />
+    <Position X="0.5" Y="6.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAACAEAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAg=</HashCode>
       <FileName>Models\Employee.cs</FileName>

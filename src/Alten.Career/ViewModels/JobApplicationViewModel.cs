@@ -7,6 +7,8 @@ namespace Alten.Career.ViewModels
 {
     public sealed class JobApplicationViewModel
     {
+
+
         public JobViewModel Job { get; set; }
 
         [Display(Description = "Only for addressing properly and personally.")]

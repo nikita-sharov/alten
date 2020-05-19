@@ -41,9 +41,6 @@ namespace Alten.Career.ViewModels
         [DataType(DataType.MultilineText)]
         public ICollection<string> Profile { get; set; }
 
-        /// <summary>
-        /// Lower inclusive bound of the salary range, gross, in euros.
-        /// </summary>
         [Range(1, int.MaxValue)]
         public int MonthlySalaryInEuros { get; set; }        
 
@@ -53,6 +50,8 @@ namespace Alten.Career.ViewModels
         public EmployeeViewModel ContactPerson { get; set; }
 
         public string Footer { get; set; } = "Are you looking for interesting tasks and a permanent employment contract? Then apply now using our online application form.";
+
+        public ICollection<JobApplicationViewModel> Applications { get; set; }
 
         private string MonthlySalaryText => string.Format(SalaryFormatInfo, "{0:#,###},-- €", MonthlySalaryInEuros);
 

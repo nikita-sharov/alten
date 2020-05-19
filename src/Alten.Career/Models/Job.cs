@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Alten.Career.Models
@@ -31,10 +32,15 @@ namespace Alten.Career.Models
         [MaxLength(ProfileMaxLength)]
         public string Profile { get; set; }
 
+        /// <summary>
+        /// Lower inclusive bound of the salary range, gross, in euros.
+        /// </summary>
         public int MonthlySalaryInEuros { get; set; }
 
         public int ContactPersonId { get; set; }
 
         public Employee ContactPerson { get; set; }
+
+        public ICollection<JobApplication> Applications { get; set; }
     }
 }

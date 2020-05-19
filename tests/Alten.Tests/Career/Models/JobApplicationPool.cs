@@ -1,4 +1,4 @@
-using Alten.Career.Models;
+using Alten.Career.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,12 +6,13 @@ using System.Globalization;
 using System.Net.Mime;
 using System.Text;
 
-namespace Alten.Career.ViewModels
+namespace Alten.Career.Models
 {
-    internal static class JobApplicationViewModelPool
+    internal static class JobApplicationPool
     {
-        public static readonly JobApplicationViewModel MyJobApplication = new JobApplicationViewModel
+        public static readonly JobApplication MyJobApplication = new JobApplication
         {
+            JobId = JobViewModelPool.YourJob.Id,
             Salutation = Salutation.Mr,
             FirstName = "Nikita",
             LastName = "Sharov",
@@ -33,13 +34,12 @@ namespace Alten.Career.ViewModels
                     ContentType = MediaTypeNames.Text.Plain,
                     FileName = "README.md"
                 }
-            },
-            PrivacyNoteAccepted = true
+            }
         };
 
         private static readonly IFormatProvider FormatProvider = new CultureInfo("de");
 
-        static JobApplicationViewModelPool()
+        static JobApplicationPool()
         {
             Assert.That.IsValid(MyJobApplication);
         }
