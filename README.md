@@ -2,7 +2,10 @@
 
 [![GitHub top language](https://img.shields.io/github/languages/top/nikita-sharov/alten?style=for-the-badge)](https://github.com/search?q=repo%3Anikita-sharov%2Falten+language%3AC%23&type=Code&ref=advsearch&l=C%23)
 
-This **Git** repository showcases a sample based around creation of [job offerings](https://www.alten.at/en/career/jobs.html) and [job applications](https://www.alten.at/en/speculative-application.html) for  [ALTEN Austria](https://www.alten.at/en).
+This **Git** repository showcases: 
+
+- a modeling sample based around creation of [job offerings](https://www.alten.at/en/career/jobs.html) and [job applications](https://www.alten.at/en/speculative-application.html) for  [ALTEN Austria](https://www.alten.at/en)
+- a [sample implementation](docs/jama.md) of an [Jama REST API](https://dev.jamasoftware.com/) client
 
 ## Career
 
