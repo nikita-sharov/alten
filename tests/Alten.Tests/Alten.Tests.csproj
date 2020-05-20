@@ -9,8 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Jama\Models\**" />
     <Compile Remove="Jama\RestSharp\**" />
+    <EmbeddedResource Remove="Jama\Models\**" />
     <EmbeddedResource Remove="Jama\RestSharp\**" />
+    <None Remove="Jama\Models\**" />
     <None Remove="Jama\RestSharp\**" />
   </ItemGroup>
 
@@ -25,10 +28,6 @@
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
     <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Jama\Models\" />
   </ItemGroup>
 
   <ItemGroup>

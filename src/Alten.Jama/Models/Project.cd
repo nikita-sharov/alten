@@ -16,10 +16,17 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Alten.Jama.Models.EntityField">
-    <Position X="6.25" Y="1.5" Width="2" />
+    <Position X="6.25" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>EQEAAAAEAAAgAAAAAAAAAAQgAAAAAAAAAAAAAEAACAA=</HashCode>
       <FileName>Models\EntityField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alten.Jama.Models.Tag">
+    <Position X="6.25" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Tag.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
