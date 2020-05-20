@@ -11,7 +11,7 @@ namespace Alten.Career.Helpers
             var memberExpression = propertyExpression.Body as MemberExpression;
             if (memberExpression == null)
             {
-                if (propertyExpression.Body is UnaryExpression unaryExpression &&
+                if ((propertyExpression.Body is UnaryExpression unaryExpression) &&
                     (unaryExpression.NodeType == ExpressionType.Convert))
                 {
                     memberExpression = unaryExpression.Operand as MemberExpression;

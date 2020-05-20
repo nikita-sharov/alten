@@ -10,9 +10,7 @@ namespace Alten.Career.Helpers
         public static string GetName(PropertyInfo property)
         {
             DisplayAttribute attribute = property.GetCustomAttribute<DisplayAttribute>();
-            string displayName = attribute?.Name ?? 
-                property.Name.Humanize();
-
+            string displayName = attribute?.Name ?? property.Name.Humanize();
             if (IsRequired(property))
             {
                 displayName += "*";

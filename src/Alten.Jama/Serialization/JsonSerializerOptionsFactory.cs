@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 
 namespace Alten.Jama.Serialization
 {
@@ -14,7 +14,6 @@ namespace Alten.Jama.Serialization
 
             options.Converters.Add(new DateTimeOffsetConverter());
             options.Converters.Add(new EnumConverterFactory());
-
             return options;
         }
     }

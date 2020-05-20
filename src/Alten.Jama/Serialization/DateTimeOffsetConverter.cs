@@ -20,7 +20,8 @@ namespace Alten.Jama.Serialization
             return DateTimeOffset.ParseExact(stringValue, Format, FormatProvider);
         }            
 
-        public override void Write(Utf8JsonWriter writer, DateTimeOffset value, JsonSerializerOptions options)
+        public override void Write(
+            Utf8JsonWriter writer, DateTimeOffset value, JsonSerializerOptions options)
         {
             var stringValue = value.ToString(Format, FormatProvider);
             writer.WriteStringValue(stringValue);
