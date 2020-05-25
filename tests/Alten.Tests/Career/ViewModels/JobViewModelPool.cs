@@ -39,9 +39,6 @@ namespace Alten.Career.ViewModels
             }
         };
 
-        static JobViewModelPool()
-        {
-            Assert.That.IsValid(YourJob);
-        }
+        static JobViewModelPool() => Assert.That.IsValid(YourJob);
     }
 }

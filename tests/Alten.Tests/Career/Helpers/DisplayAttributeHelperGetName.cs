@@ -22,10 +22,8 @@ namespace Alten.Career.Helpers
             new object[] { GetPropertyInfo(model => model.RequiredReference), "Required reference*" }
         };
 
-        private static PropertyInfo GetPropertyInfo(Expression<Func<Dummy, object>> expression)
-        {
-            return PropertyInfoHelper.GetPropertyInfo(expression);
-        }
+        private static PropertyInfo GetPropertyInfo(Expression<Func<Dummy, object>> expression) =>
+            PropertyInfoHelper.GetPropertyInfo(expression);
 
         [TestMethod]
         [DynamicData(nameof(Data))]

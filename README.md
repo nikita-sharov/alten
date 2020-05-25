@@ -4,9 +4,9 @@
 
 This **Git** repository showcases: 
 
-- [multiple branches](https://github.com/nikita-sharov/alten/branches);
-- a modeling sample ([Model](src/Alten.Career/Models)-View-[ViewModel](src/Alten.Career/ViewModels)) based around creation of [job offerings](https://www.alten.at/en/career/jobs.html) and [job applications](https://www.alten.at/en/speculative-application.html) for  [ALTEN Austria](https://www.alten.at/en)
+- a modeling ([Model](src/Alten.Career/Models)-View-[ViewModel](src/Alten.Career/ViewModels)) sample  based around creation of [job offerings](https://www.alten.at/en/career/jobs.html) and [job applications](https://www.alten.at/en/speculative-application.html) for  [ALTEN Austria](https://www.alten.at/en)
 - a [sample implementation](docs/jama.md) of an [Jama REST API](https://dev.jamasoftware.com/) client
+- utilization of [multiple branches](branches), several C# v7+ language features and [DI](tests/Alten.Tests/Jama/Services/RestSharpServiceFactory.cs) / [IoC](src/Alten.Jama.RestSharp/Services) patterns
 
 ## Career
 
@@ -46,10 +46,7 @@ internal static class JobViewModelPool
         }
     };
 
-    static JobViewModelPool()
-    {
-        Assert.That.IsValid(YourJob);
-    }
+    static JobViewModelPool() => Assert.That.IsValid(YourJob);
 }
 ```
 
@@ -87,10 +84,7 @@ internal static class JobApplicationPool
 
     private static readonly IFormatProvider FormatProvider = new CultureInfo("de");
 
-    static JobApplicationPool()
-    {
-        Assert.That.IsValid(MyJobApplication);
-    }
+    static JobApplicationPool() => Assert.That.IsValid(MyJobApplication);
 }
 ```
 

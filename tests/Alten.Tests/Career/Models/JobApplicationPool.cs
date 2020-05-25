@@ -39,9 +39,6 @@ namespace Alten.Career.Models
 
         private static readonly IFormatProvider FormatProvider = new CultureInfo("de");
 
-        static JobApplicationPool()
-        {
-            Assert.That.IsValid(MyJobApplication);
-        }
+        static JobApplicationPool() => Assert.That.IsValid(MyJobApplication);
     }
 }
