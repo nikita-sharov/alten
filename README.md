@@ -6,7 +6,7 @@ This **Git** repository having [multiple branches](branches) showcases:
 
 - a modeling ([Model](src/Alten.Career/Models)-View-[ViewModel](src/Alten.Career/ViewModels)) sample  based around creation of [job offerings](https://www.alten.at/en/career/jobs.html) and [job applications](https://www.alten.at/en/speculative-application.html) for  [ALTEN Austria](https://www.alten.at/en)
 - a [sample implementation](docs/jama.md) of an [Jama REST API](https://dev.jamasoftware.com/) client, utilizing **C#** v7+ language features, and [DI](tests/Alten.Tests/Jama/Services/RestSharpServiceFactory.cs) / [IoC](src/Alten.Jama.RestSharp/Services) patterns / principles
-- [feedback](docs/online-application-form.md) on the [job application form](https://www.alten.at/en/career/application.html?ad_id=3461), considered to be a questionnaire
+- [feedback](docs/online-application-form.md) on the [job application form](https://www.alten.at/en/career/application.html?ad_id=3461), considered to be a user survey
 
 ## Career
 

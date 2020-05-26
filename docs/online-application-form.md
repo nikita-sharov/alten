@@ -1,5 +1,7 @@
 # Online application form
 
+Considered to be a user survey, asking for improvement of its basic functions:
+
 <a href="https://www.alten.at/en/career/apply/3461">
   <img src="media/online-application-form.png" alt="Online application form">
 </a>
