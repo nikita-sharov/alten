@@ -1,5 +1,7 @@
 # Online application form
 
+> You are responsible for providing advanced functions collecting within user surveys
+
 Considered to be a user survey, asking for improvement of its basic functions:
 
 <a href="https://www.alten.at/en/career/apply/3461">
