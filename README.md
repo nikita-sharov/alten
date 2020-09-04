@@ -23,13 +23,13 @@ internal static class JobViewModelPool
         EntryLevels = EntryLevels.ExperiencedProfessionals,
         Tasks = new List<string>
         {
-            "As a Software Developer (m/f/d) C# you are responsible for programming software using C# and .NET",
-            "In the course of this you stabilize the TCE architecture and you provide the connection to JAMA",
+            "As a Software Developer (m/f/d) C# you are responsible for programming software using C# [...]",
+            "In the course of this you [...] provide the connection to JAMA",
             "You are responsible for providing advanced functions collecting within user surveys"
         },
         Profile = new List<string>
         {
-            "You have a completed technical education in software development, computer science or equivalent",
+            "You have a completed technical education in software development [...] or equivalent",
             "Relevant professional experience with C# are required for this position",
             "You also have Git experience (at least all basic operations)",
             "Moreover, you have a solid WPF knowledge as well as experience with MVVM pattern",
