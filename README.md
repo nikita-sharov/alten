@@ -23,7 +23,7 @@ internal static class JobViewModelPool
         EntryLevels = EntryLevels.ExperiencedProfessionals,
         Tasks = new List<string>
         {
-            "As a Software Developer (m/f/d) C# you are responsible for programming software using C# [...]",
+            "As a Software Developer (m/f/d) C# you are responsible for programming software [...]",
             "In the course of this you [...] provide the connection to JAMA",
             "You are responsible for providing advanced functions collecting within user surveys"
         },
